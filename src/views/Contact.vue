@@ -1,6 +1,7 @@
 <template>
   <div class="background">
     <div class="ship"></div>
+    <img srcset="../assets/crevette.png" class="yvette" />
   </div>
 </template>
 
@@ -23,11 +24,19 @@ export default {
   height: 400vh;
   width: 100%;
   background: linear-gradient(
-    360deg,
-    rgba(131, 58, 180, 1) 0%,
-    rgba(253, 29, 29, 1) 50%,
-    rgba(252, 176, 69, 1) 100%
+    180deg,
+    #00bbe1 7.06%,
+    #0068aa 15.21%,
+    #000585 25.29%,
+    #000000 100%
   );
+}
+
+.yvette {
+  height: auto;
+  width: auto;
+  max-width: 50px;
+  max-height: 50px;
 }
 
 .ship {
@@ -36,5 +45,18 @@ export default {
   position: fixed;
   top: 60%;
   background: url(../assets/ship.svg);
+  //animation: float 6s ease-in-out infinite;
 }
+
+/*@keyframes float {
+  0% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(-20px);
+  }
+  100% {
+    transform: translatey(0px);
+  }
+}*/
 </style>
