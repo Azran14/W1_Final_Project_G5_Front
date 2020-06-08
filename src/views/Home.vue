@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <div id="splash">
+    <div id="loader_page">
       <h1 class="loader_title">EXPLORE THE OCEAN</h1>
       <img src="../assets/shipnolight.svg" class="loader_submarine" />
     </div>
@@ -14,13 +14,13 @@
 
 <script>
 // @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
+// import HelloWorld from "@/components/HelloWorld.vue";
 
 export default {
   name: "Home",
-  components: {
-    HelloWorld,
-  },
+  // components: {
+  //   HelloWorld,
+  // },
 };
 </script>
 
@@ -48,7 +48,7 @@ body {
   background-color: #0685af;
 }
 
-#splash {
+#loader_page {
   background: rgb(6, 133, 175);
   background: linear-gradient(
     0deg,
@@ -62,7 +62,7 @@ body {
   top: 0;
   width: 100%;
   height: 100%;
-  animation: splash 3s ease-in;
+  animation: loader_page 3s ease-in;
   animation-fill-mode: forwards;
 }
 
@@ -107,7 +107,7 @@ body {
   display: none;
 }
 
-#splash .anim {
+#loader_pa .anim {
   height: 100%;
   position: absolute;
   left: 50%;
@@ -116,7 +116,7 @@ body {
   animation-fill-mode: forwards;
 }
 
-@keyframes splash {
+@keyframes loader_page {
   0% {
     transform: translate(0%, 0%);
   }
