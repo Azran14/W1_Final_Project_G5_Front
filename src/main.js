@@ -58,18 +58,16 @@ window.addEventListener("keydown", onKeyDown);
 
 // !!!!!!   POP-UP AU CLICK POUR LE MOMENT     !!!!!
 
-// PS : YVETTE LA GRENOUILLE CREVETTE HORRIBLE !!!! 
+// PS : YVETTE LA GRENOUILLE CREVETTE HORRIBLE !!!!
 
-let modalShrimp = document.querySelector('.modal-shrimp');
-let modalBg = document.querySelector('.modal-bg');
-let modalClose = document.querySelector('.modal-close'); // close pop-up
+let modalShrimp = document.querySelector(".modal-shrimp");
+let modalBg = document.querySelector(".modal-bg");
+let modalClose = document.querySelector(".modal-close"); // close pop-up
 
-modalShrimp.addEventListener('click', function(){
-  modalBg.classList.add('bg-active')
-})
+modalShrimp.addEventListener("click", function() {
+  modalBg.classList.add("bg-active");
+});
 
-modalClose.addEventListener('click', function(){
-  modalBg.classList.remove('bg-active')
-})
-
-
+modalClose.addEventListener("click", function() {
+  modalBg.classList.remove("bg-active");
+});
