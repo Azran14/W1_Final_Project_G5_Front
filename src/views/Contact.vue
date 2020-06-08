@@ -1,7 +1,6 @@
 <template>
-  <div>
-    <h1>This is a contact page</h1>
-    <Mailto :email="email" color="blue" />
+  <div class="background">
+    <div class="ship"></div>
   </div>
 </template>
 
@@ -14,11 +13,28 @@ export default {
   //Mailto,
   //},
   data() {
-    return {
-      email: "test@msn.com",
-    };
+    return {};
   },
 };
 </script>
 
-<style lang="scss"></style>
+<style lang="scss" scoped>
+.background {
+  height: 400vh;
+  width: 100%;
+  background: linear-gradient(
+    360deg,
+    rgba(131, 58, 180, 1) 0%,
+    rgba(253, 29, 29, 1) 50%,
+    rgba(252, 176, 69, 1) 100%
+  );
+}
+
+.ship {
+  height: 40px;
+  width: 40px;
+  position: fixed;
+  top: 60%;
+  background: black;
+}
+</style>

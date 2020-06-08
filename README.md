@@ -4,7 +4,7 @@
 
 - DE AMORIN Marco
 - COUSIN Charles
-- DUMARCHE Arnaud
+- DUMARCHÉ Arnaud
 - FERREIRA Raphael
 - RATSIMISETRA Nastia
 - BENSIMHON Yoan
