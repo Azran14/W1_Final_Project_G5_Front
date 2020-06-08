@@ -36,16 +36,16 @@ function moveY(value) {
 // Listen to keys wasd
 function onKeyDown(event) {
   switch (event.key) {
-    case "w":
+    case ("w", "ArrowUp"):
       if (shipY >= shipSize + margin) moveY(-100);
       break;
-    case "s":
+    case ("s", "ArrowDown"):
       if (shipY <= documentHeight - margin - shipSize) moveY(100);
       break;
-    case "a":
+    case ("a", "ArrowLeft"):
       if (shipX >= margin) moveShipX(-moveDistance);
       break;
-    case "d":
+    case ("d", "ArrowRight"):
       if (shipX <= window.innerWidth - margin - 2 * shipSize)
         moveShipX(moveDistance);
       break;
