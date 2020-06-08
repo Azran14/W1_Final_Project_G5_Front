@@ -33,10 +33,10 @@ export default {
 }
 
 .yvette {
-  height: auto;
-  width: auto;
   max-width: 50px;
   max-height: 50px;
+  position: absolute;
+  top: 70%;
 }
 
 .ship {
