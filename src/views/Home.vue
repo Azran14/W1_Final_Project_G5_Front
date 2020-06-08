@@ -36,7 +36,8 @@ html, body {
 }
 
 #splash {
-  background: #FEFCD0;
+background: rgb(6,133,175);
+background: linear-gradient(0deg, rgba(6,133,175,1) 0%, rgba(6,133,175,1) 30%, rgba(254,252,208,1) 30%);
   background-repeat: repeat-y;
   position: fixed;
   left: 0;
@@ -45,7 +46,6 @@ html, body {
   height: 100%;
   animation: splash 3s ease-in;
   animation-fill-mode: forwards;
-  -webkit-animation-fill-mode: forwards;
 }
 
 .submarine{
@@ -63,9 +63,7 @@ html, body {
   left: 50%;
   width: 100px;
   transform: translate(-50%,100%);
-  animation: loader 4s linear;
   animation-fill-mode: forwards;
-  -webkit-animation-fill-mode: forwards;
 }
 
 @keyframes splash {
