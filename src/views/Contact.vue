@@ -31,10 +31,10 @@ export default {
 }
 
 .ship {
-  height: 40px;
-  width: 40px;
+  height: 255px;
+  width: 255px;
   position: fixed;
   top: 60%;
-  background: black;
+  background: url(../assets/ship.svg);
 }
 </style>
