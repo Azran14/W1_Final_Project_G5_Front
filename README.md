@@ -1,4 +1,13 @@
-# web1-endgame
+# W1_Final_Project_G5
+
+## Group members
+
+- DE AMORIN Marco
+- COUSIN Charles
+- DUMARCHE Arnaud
+- FERREIRA Raphael
+- RATSIMISETRA Nastia
+- BENSIMHON Yoan
 
 ## Stack du projet
 
@@ -9,29 +18,33 @@
 
 ## Route
 
-| url      | nom      |
-| ---      | ---      |
-| /        | Homepage |
-| /team    | Team     |
+| url   | nom      |
+| ----- | -------- |
+| /     | Homepage |
+| /team | Team     |
 
 ## Command line pour démarrer le projet
 
 ### Project setup
+
 ```
 yarn install
 ```
 
 ### Compiles and hot-reloads for development
+
 ```
 yarn serve
 ```
 
 ### Compiles and minifies for production
+
 ```
 yarn build
 ```
 
 ### Lints and fixes files
+
 ```
 yarn lint
 ```
@@ -45,4 +58,3 @@ https://router.vuejs.org/
 https://www.vuemastery.com/pdf/Vue-Essentials-Cheat-Sheet.pdf
 
 https://marozed.ma/vue-cheatsheet/
-
