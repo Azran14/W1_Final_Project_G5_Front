@@ -2,7 +2,12 @@
   <div class="home">
     <div id="splash">
       <h1 class="loader_title">EXPLORE THE OCEAN</h1>
-      <img src="../assets/shipnolight.svg" class="submarine" />
+      <img src="../assets/shipnolight.svg" class="loader_submarine" />
+    </div>
+    <div class="loader">
+      <h1 class="loader_title-yellow">EXPLORE THE OCEAN</h1>
+      <img src="../assets/shipnolight.svg" class="loader_submarine" />
+      <div src="../assets/hand.svg" class="loader_submarine-hand" />
     </div>
   </div>
 </template>
@@ -40,7 +45,6 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
-  font-family: Helvetica, Arial, sans-serif;
   background-color: #0685af;
 }
 
@@ -63,7 +67,7 @@ body {
 }
 
 .loader_title {
-  font-family: Poppins;
+  font-family: "poppins-bold";
   font-style: normal;
   font-weight: bold;
   font-size: 64px;
@@ -72,12 +76,35 @@ body {
   letter-spacing: 0.1em;
   text-transform: capitalize;
   color: #3594ae;
+  margin-top: 12%;
 }
 
-.submarine {
+.loader_title-yellow {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "poppins-bold";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 64px;
+  line-height: 96px;
+  letter-spacing: 0.1em;
+  text-transform: capitalize;
+  color: rgba(254, 252, 208, 1);
+}
+
+.loader_submarine {
   position: fixed;
   left: 45%;
-  bottom: 10%;
+  bottom: 22%;
+}
+
+.loader_submarine-hand {
+  position: fixed;
+  left: 51%;
+  bottom: 21%;
+  display: none;
 }
 
 #splash .anim {
