@@ -57,6 +57,9 @@
         </svg>
       </div>
     </div>
+      <li><a href="./home">home</a></li>
+  <li><a href="/team">team</a></li>
+  <li><a href="/contact">contact</a></li>
   </div>
 </template>
 
@@ -93,20 +96,20 @@ export default {
   position: fixed;
   top: 60%;
   background: url(../assets/ship.svg);
-  animation: float 3s ease-in-out;
+  // animation: float 3s ease-in-out;
 }
 
-@keyframes float {
-  0% {
-    transform: translatey(50px);
-  }
-  50% {
-    transform: translatey(-50px);
-  }
-  100% {
-    transform: translatey(0px);
-  }
-}
+// @keyframes float {
+//   0% {
+//     transform: translatey(50px);
+//   }
+//   50% {
+//     transform: translatey(-50px);
+//   }
+//   100% {
+//     transform: translatey(0px);
+//   }
+// }
 .modal-bg {
   position: fixed;
   width: 100%;
