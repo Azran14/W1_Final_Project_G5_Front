@@ -2,7 +2,6 @@
   <div class="home">
     <div id="loader__page">
       <h1 class="loader__title">EXPLORE THE OCEAN</h1>
-      <img src="../assets/shipnolight.svg" class="loader__submarine" />
     </div>
     <ul>
       <li><a href="/">home</a></li>
@@ -16,6 +15,9 @@
       <div class="loader__submarine">
         <img src="../assets/shipnolight.svg" />
         <div src="../assets/hand.svg" class="loader__submarine--hand" />
+      </div>
+      <div class="loader__info">
+        <p>Take place in the submarine</p>
       </div>
       <div class="loader__params">
         <img
@@ -61,7 +63,7 @@ export default {
 
 html,
 body {
-  height: 100%;
+  height: 100vh;
   margin: 0;
   padding: 0;
   background-color: #0685af;
@@ -122,12 +124,21 @@ body {
 }
 
 .loader__submarine--hand {
-  position: fixed;
   left: 51%;
   bottom: 21%;
   display: none;
 }
+.loader__params {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row-reverse;
+  margin-right: 100px;
+}
 
+.loader__info {
+  color: #fefcd0;
+  font-family: "poppins";
+}
 #loader__pa .anim {
   height: 100%;
   position: absolute;
