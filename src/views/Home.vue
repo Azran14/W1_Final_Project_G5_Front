@@ -9,6 +9,12 @@
       <img src="../assets/shipnolight.svg" class="loader_submarine" />
       <div src="../assets/hand.svg" class="loader_submarine-hand" />
     </div>
+    <ul>
+  <li><a href="./home">home</a></li>
+  <li><a href="/team">team</a></li>
+  <li><a href="/contact">contact</a></li>
+</ul>
+
   </div>
 </template>
 
@@ -18,9 +24,9 @@
 
 export default {
   name: "Home",
-  // components: {
-  //   HelloWorld,
-  // },
+  components: {
+  
+  },
 };
 </script>
 
