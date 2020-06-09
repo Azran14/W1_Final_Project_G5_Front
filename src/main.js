@@ -72,3 +72,6 @@ modalShrimp.addEventListener("click", function() {
 modalClose.addEventListener("click", function() {
   modalBg.classList.remove("bg-active");
 });
+
+
+

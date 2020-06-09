@@ -1,8 +1,11 @@
 <template>
   <div class="home">
     <div id="loader__page">
+<div class="ocean">
+  <div class="wave"></div>
+  <div class="wave"></div>
+</div>
       <h1 class="loader__title">EXPLORE THE OCEAN</h1>
-      <img src="../assets/shipnolight.svg" class="loader__submarine" />
     </div>
     <ul>
       <li><a href="/">home</a></li>
@@ -68,13 +71,7 @@ body {
 }
 
 #loader__page {
-  background: rgb(6, 133, 175);
-  background: linear-gradient(
-    0deg,
-    rgba(6, 133, 175, 1) 0%,
-    rgba(6, 133, 175, 1) 30%,
-    rgba(254, 252, 208, 1) 30%
-  );
+  background: rgba(254, 252, 208, 1);
   background-repeat: repeat-y;
   position: fixed;
   left: 0;
@@ -134,6 +131,7 @@ body {
   left: 50%;
   width: 100px;
   transform: translate(-50%, 100%);
+  animation: 1s ease-in-out ;
   animation-fill-mode: forwards;
 }
 
@@ -146,6 +144,49 @@ body {
   }
   100% {
     transform: translate(0%, -100%);
+  }
+
+}
+
+.ocean { 
+  height: 15%;
+  width:100%;
+  position:absolute;
+  bottom:0;
+  left:0;
+  background: #0685af;
+}
+
+.wave {
+  background: url(../assets/waves.svg) repeat-x; 
+  position: absolute;
+  top: -198px;
+  width: 6400px;
+  height: 198px;
+  animation: wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite;
+}
+
+.wave:nth-of-type(2) {
+  top: -175px;
+  animation: wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) -.125s infinite, swell 7s ease -1.25s infinite;
+  opacity: 1;
+}
+
+@keyframes wave {
+  0% {
+    margin-left: 0;
+  }
+  100% {
+    margin-left: -1600px;
+  }
+}
+
+@keyframes swell {
+  0%, 100% {
+    transform: translate3d(0,-25px,0);
+  }
+  50% {
+    transform: translate3d(0,5px,0);
   }
 }
 </style>
