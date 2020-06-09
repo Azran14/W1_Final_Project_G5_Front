@@ -1,20 +1,19 @@
 <template>
   <div class="home">
-    <div id="loader_page">
-      <h1 class="loader_title">EXPLORE THE OCEAN</h1>
-      <img src="../assets/shipnolight.svg" class="loader_submarine" />
+    <div id="loader__page">
+      <h1 class="loader__title">EXPLORE THE OCEAN</h1>
+      <img src="../assets/shipnolight.svg" class="loader__submarine" />
     </div>
     <div class="loader">
-      <h1 class="loader_title-yellow">EXPLORE THE OCEAN</h1>
-      <img src="../assets/shipnolight.svg" class="loader_submarine" />
-      <div src="../assets/hand.svg" class="loader_submarine-hand" />
+      <h1 class="loader__title--yellow">EXPLORE THE OCEAN</h1>
+      <img src="../assets/shipnolight.svg" class="loader__submarine" />
+      <div src="../assets/hand.svg" class="loader__submarine--hand" />
     </div>
     <ul>
-  <li><a href="./home">home</a></li>
-  <li><a href="/team">team</a></li>
-  <li><a href="/contact">contact</a></li>
-</ul>
-
+      <li><a href="/">home</a></li>
+      <li><a href="/team">team</a></li>
+      <li><a href="/contact">contact</a></li>
+    </ul>
   </div>
 </template>
 
@@ -24,9 +23,7 @@
 
 export default {
   name: "Home",
-  components: {
-  
-  },
+  components: {},
 };
 </script>
 
@@ -54,7 +51,7 @@ body {
   background-color: #0685af;
 }
 
-#loader_page {
+#loader__page {
   background: rgb(6, 133, 175);
   background: linear-gradient(
     0deg,
@@ -68,11 +65,11 @@ body {
   top: 0;
   width: 100%;
   height: 100%;
-  animation: loader_page 3s ease-in;
+  animation: loader__page 3s ease-in;
   animation-fill-mode: forwards;
 }
 
-.loader_title {
+.loader__title {
   font-family: "poppins-bold";
   font-style: normal;
   font-weight: bold;
@@ -83,9 +80,10 @@ body {
   text-transform: capitalize;
   color: #3594ae;
   margin-top: 12%;
+  z-index: 1;
 }
 
-.loader_title-yellow {
+.loader__title-yellow {
   position: absolute;
   top: 30%;
   left: 50%;
@@ -98,22 +96,23 @@ body {
   letter-spacing: 0.1em;
   text-transform: capitalize;
   color: rgba(254, 252, 208, 1);
+  z-index: 10;
 }
 
-.loader_submarine {
+.loader__submarine {
   position: fixed;
   left: 45%;
   bottom: 22%;
 }
 
-.loader_submarine-hand {
+.loader__submarine--hand {
   position: fixed;
   left: 51%;
   bottom: 21%;
   display: none;
 }
 
-#loader_pa .anim {
+#loader__pa .anim {
   height: 100%;
   position: absolute;
   left: 50%;
@@ -122,7 +121,7 @@ body {
   animation-fill-mode: forwards;
 }
 
-@keyframes loader_page {
+@keyframes loader__page {
   0% {
     transform: translate(0%, 0%);
   }
