@@ -4,16 +4,32 @@
       <h1 class="loader__title">EXPLORE THE OCEAN</h1>
       <img src="../assets/shipnolight.svg" class="loader__submarine" />
     </div>
-    <div class="loader">
-      <h1 class="loader__title--yellow">EXPLORE THE OCEAN</h1>
-      <img src="../assets/shipnolight.svg" class="loader__submarine" />
-      <div src="../assets/hand.svg" class="loader__submarine--hand" />
-    </div>
     <ul>
       <li><a href="/">home</a></li>
       <li><a href="/team">team</a></li>
       <li><a href="/contact">contact</a></li>
     </ul>
+    <div class="loader">
+      <div class="loader__title--yellow">
+        <h1>EXPLORE THE OCEAN</h1>
+      </div>
+      <div class="loader__submarine">
+        <img src="../assets/shipnolight.svg" />
+        <div src="../assets/hand.svg" class="loader__submarine--hand" />
+      </div>
+      <div class="loader__params">
+        <img
+          class="loader__params--langue"
+          src="../assets/english.png"
+          alt="langue"
+        />
+        <img
+          class="loader__params--sound"
+          src="../assets/sound.png"
+          alt="sound"
+        />
+      </div>
+    </div>
   </div>
 </template>
 
@@ -69,6 +85,11 @@ body {
   animation-fill-mode: forwards;
 }
 
+.loader {
+  display: flex;
+  flex-direction: column;
+}
+
 .loader__title {
   font-family: "poppins-bold";
   font-style: normal;
@@ -80,14 +101,10 @@ body {
   text-transform: capitalize;
   color: #3594ae;
   margin-top: 12%;
-  z-index: 1;
 }
 
-.loader__title-yellow {
-  position: absolute;
-  top: 30%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.loader__title--yellow {
+  margin-top: 15%;
   font-family: "poppins-bold";
   font-style: normal;
   font-weight: bold;
@@ -96,7 +113,6 @@ body {
   letter-spacing: 0.1em;
   text-transform: capitalize;
   color: rgba(254, 252, 208, 1);
-  z-index: 10;
 }
 
 .loader__submarine {
