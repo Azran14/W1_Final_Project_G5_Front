@@ -1,134 +1,101 @@
 <template>
-  <div class="takePlace">
-    <div class="htu">
-      <div class="desc">
-        <h3>MOVE THE SUBMARINE</h3>
-      </div>
-      <div class="touch">
-        <img src="../assets/keyboard.svg" alt="keyboard" />
-        <img class="shiptest" src="../assets/shipnolight.svg" alt="ship" />
-        <img src="../assets/wasd.svg" alt="wasd" />
-      </div>
-      <div class="infos">
-        <p>Move the subamarine using the arrow keys or WASD</p>
-      </div>
-      <div class="more">
-        <img class="langue" src="../assets/english.png" alt="langue" />
-        <img class="sound" src="../assets/sound.png" alt="sound" />
-      </div>
+  <div id="htp">
+    <div class="htp__title">
+      <h3>{{ title }}</h3>
     </div>
-    <div class="find">
-      <div class="find__touch">
-        <div class="desc">
-          <h3>FIND SPECIES</h3>
-        </div>
-        <div class="find__infos">
-          <img src="../assets/space.png" alt="space touch" />
-          <img class="shiptest" src="../assets/shipnolight.svg" alt="ship" />
-          <p>Press SPACE when you want to know more about a specie</p>
-        </div>
-      </div>
-      <div class="find__more">
-        <img class="langue" src="../assets/english.png" alt="langue" />
-        <img class="sound" src="../assets/sound.png" alt="sound" />
-      </div>
+    <div class="htp__space">
+      <img src="../assets/space.png" alt="space touch" v-if="counter === 2" />
     </div>
-    <div class="research">
-      <div class="desc">
-        <h3>GO RESEARCH THAT SCHRIMP !</h3>
-      </div>
-      <div class="shiplight">
-        <img src="../assets/ship.svg" alt="ship" />
-      </div>
-      <div class="infos">
-        <p>Move the subamarine using the arrow keys or WASD</p>
-      </div>
-      <div class="more">
-        <img class="langue" src="../assets/english.png" alt="langue" />
-        <img class="sound" src="../assets/sound.png" alt="sound" />
-      </div>
+    <div class="htp__infos">
+      <img src="../assets/keyboard.svg" alt="keyboard" v-if="counter === 1" />
+      <img
+        class="htp__submarine"
+        v-if="counter === 3"
+        src="../assets/ship.svg"
+        alt="submarine"
+      />
+      <img
+        class="htp__submarine"
+        @click="changer()"
+        src="../assets/shipnolight.svg"
+        alt="submarine"
+      />
+      <img src="../assets/wasd.svg" alt="wasd" v-if="counter === 1" />
+    </div>
+    <div class="htp__subtitle">
+      <p>{{ subtitle }}</p>
+    </div>
+    <div class="htp__more">
+      <img class="langue" src="../assets/english.png" alt="langue" />
+      <img class="sound" src="../assets/sound.png" alt="sound" />
     </div>
   </div>
 </template>
 
 <script>
 export default {
+  el: "#htp",
   data() {
     return {
-      members: ["Clément", "Bastien"],
+      title: "EXPLORE THE OCEAN",
+      titles: ["MOVE THE SUBMARINE", "FIND SPECIES", "GO SEARCH THE SHRIMP"],
+      subtitle: "Take place in the submarine.",
+      subtitles: [
+        "Move the subamarine using the arrow keys or WASD",
+        "Press SPACE when you want to know more about a species",
+        "Move the subamarine using the arrow keys or WASD",
+      ],
+      counter: 0,
     };
+  },
+  methods: {
+    changer: function() {
+      this.title = this.titles[0];
+      this.titles[0] = this.titles[1];
+      this.titles[1] = this.titles[2];
+
+      this.subtitle = this.subtitles[0];
+      this.subtitles[0] = this.subtitles[1];
+      this.subtitles[1] = this.subtitles[2];
+
+      this.counter += 1;
+    },
   },
 };
 </script>
 
 <style lang="scss">
-.takePlace {
-  width: 100vw;
+#htp {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  font-family: "Poppins-bold";
+  justify-content: center;
 }
-.htu {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-}
-.desc {
-  h3 {
-    margin-top: 150px;
-    font-size: 80px;
-    color: #fefcd0;
-  }
-}
-.touch {
-  display: flex;
-  justify-content: space-around;
-}
-.infos {
+.htp__title {
+  margin-top: 150px;
+  font-size: 80px;
   color: #fefcd0;
 }
-.more {
-  display: flex;
-  flex-direction: row-reverse;
-  margin-right: 50px;
-  .langue {
-    margin-left: 20px;
-  }
+.htp__space {
+  margin-top: 100px;
 }
-.find {
+.htp__infos {
+  width: 100vw;
+  margin-top: 200px;
   display: flex;
-  flex-direction: column;
-}
-.find__touch {
-  display: flex;
-  flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  height: 100vh;
 }
-.find__infos {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+
+.htp__subtitle {
   color: #fefcd0;
-  font-family: "poppins-bold";
-  height: 50vh;
+  margin-top: 6%;
 }
-.find__more {
+.htp__more {
   display: flex;
   flex-direction: row-reverse;
   margin-right: 50px;
-  margin-bottom: 50px;
   .langue {
     margin-left: 20px;
   }
-}
-.research {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
 }
 </style>
