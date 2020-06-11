@@ -3,6 +3,7 @@ import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
 import Team from "../views/Team.vue";
 import Contact from "../views/Contact.vue";
+import Modal from "../views/Modal.vue";
 
 Vue.use(VueRouter);
 
@@ -24,6 +25,11 @@ const routes = [
     name: "Contact",
     component: Contact,
   },
+  {
+    path: "/modal",
+    name: "Modal",
+    component: Modal,
+  }
 ];
 
 const router = new VueRouter({
