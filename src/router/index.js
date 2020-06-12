@@ -4,6 +4,7 @@ import Home from "../views/Home.vue";
 import Team from "../views/Team.vue";
 import Contact from "../views/Contact.vue";
 import Modal from "../views/Modal.vue";
+import Htp from "../views/Htp.vue";
 
 Vue.use(VueRouter);
 
@@ -29,7 +30,12 @@ const routes = [
     path: "/modal",
     name: "Modal",
     component: Modal,
-  }
+  },
+  {
+    path: "/htp",
+    name: "Htp",
+    component: Htp,
+  },
 ];
 
 const router = new VueRouter({

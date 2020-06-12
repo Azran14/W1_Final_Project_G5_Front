@@ -325,7 +325,7 @@ export default {
 
 .ship {
   height: 255px;
-  width: 255px;
+  width: 255px; 
   position: fixed;
   top: 60%;
   background: url(../assets/ship.svg);
