@@ -1,10 +1,10 @@
 <template>
-  <a href="find"> <img src="../assets/keyboard.svg" alt="keys" /> </a>
+  <a href="research"> <img src="../assets/space.png" alt="space" /> </a>
 </template>
 
 <script>
 export default {
-  name: "Keyboard",
+  name: "Space",
 };
 </script>
 <style scoped lang="scss"></style>
