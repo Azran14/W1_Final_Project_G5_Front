@@ -4,7 +4,10 @@
       <Title class="container__title" msg="MOVE THE SUBMARINE" />
       <div class="container__infos">
         <Keyboard class="container__keyboard" />
-        <Submarine class="container__submarine" />
+        <router-link to="find">
+          <Submarine class="container__submarine" />
+        </router-link>
+
         <Wasd class="container__wasd" />
       </div>
       <Subinfos

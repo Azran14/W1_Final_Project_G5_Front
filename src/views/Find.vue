@@ -4,7 +4,9 @@
       <Title class="container__title" msg="FIND SPECIES" />
       <div class="container__infos">
         <Space class="container_space" />
-        <Submarine class="container__submarine" />
+        <router-link to="research">
+          <Submarine class="container__submarine" />
+        </router-link>
       </div>
       <Subinfos
         class="container__subinfos"
