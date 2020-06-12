@@ -5,28 +5,50 @@
         <div class="modal-overlay" v-if="showModal" @click="showModal= false"></div>
         </transition>
         <transition name="slide" appear>
-            <div class="modal" v-if="showModal"><h2>{{ subtitle }}</h2><p>{{message}}</p>
-            <span class="span" @click="showModal= false"><img  class="closePop" src="../assets/closepopup.svg" alt=""></span></div>
+            <div class="modal" v-if="showModal">
+            <img v-bind:src="imageSrc">
+            <h2>{{ subtitle }}</h2>
+            <h3>longevity :</h3>
+            <p>{{ longevityText }}</p>
+            <h3>reproduction :</h3>
+            <p>{{ reproductionText }}</p>
+            <p>{{ message }}</p>
+            <h4>Weight : </h4>
+            <p>{{weightValue}}</p>
+            <h4>Size : </h4>
+            <p>{{sizeValue}}</p>
+            <span class="span" @click="showModal= false"><img  class="closePop" src="../assets/closepopup.svg" alt="CLOSE MODAL"></span></div>
         </transition>
         
     </div>
 </template>
 
 <script>
+import imageSrc from '../assets/dolphin.svg'
+
 export default {
     data(){
         return{
-            message : 'coucou, coucou, coucou, coucou, coucou, coucou, coucou, coucou, coucou, coucou, coucou, coucou, coucou, coucou, coucou, coucou, coucou, coucou, ',
-            subtitle : 'Lorem Ipsum',
-            showModal: false
+            subtitle : 'YVETTE THE PINK SHRIMP',
+            showModal: false,
+            imageSrc : imageSrc,
+            longevityText: '2 years ',
+            reproductionText : 'The females lay 50,000 to 1 million eggs, which hatch after some 24 hours.',
+            message: 'Hi, my name is Yvette . I am from the pandalidae family and I am a crustacean',
+            weightValue: '10g',
+            sizeValue: 'Around 5 to 10cm'
+
+
         }
     }
+
 }
 </script>
 
 <style lang="scss" scoped>
 .bg{
-    background: url('../assets/bg.png');
+background: url('../assets/bg.png');
+background-size: cover;
 position: relative;
 display: flex;
 justify-content: center;
@@ -64,7 +86,7 @@ overflow-x: hidden;
 }
  h2{
         color: white;
-        margin-bottom: 15px;
+        margin-bottom: 65px;
         font-size: 32px;
         font-weight: 900;
     }
