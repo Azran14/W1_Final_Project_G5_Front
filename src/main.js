@@ -1,4 +1,3 @@
-
 import Vue from "vue";
 import App from "./App.vue";
 import router from "./router";
@@ -37,16 +36,29 @@ function moveY(value) {
 // Listen to keys wasd
 function onKeyDown(event) {
   switch (event.key) {
-    case ("w", "ArrowUp"):
+    case "w":
       if (shipY >= shipSize + margin) moveY(-100);
       break;
-    case ("s", "ArrowDown"):
+    case "ArrowUp":
+      if (shipY >= shipSize + margin) moveY(-100);
+      break;
+    case "s":
       if (shipY <= documentHeight - margin - shipSize) moveY(100);
       break;
-    case ("a", "ArrowLeft"):
+    case "ArrowDown":
+      if (shipY <= documentHeight - margin - shipSize) moveY(100);
+      break;
+    case "a":
       if (shipX >= margin) moveShipX(-moveDistance);
       break;
-    case ("d", "ArrowRight"):
+    case "ArrowLeft":
+      if (shipX >= margin) moveShipX(-moveDistance);
+      break;
+    case "d":
+      if (shipX <= window.innerWidth - margin - 2 * shipSize)
+        moveShipX(moveDistance);
+      break;
+    case "ArrowRight":
       if (shipX <= window.innerWidth - margin - 2 * shipSize)
         moveShipX(moveDistance);
       break;
@@ -72,6 +84,3 @@ modalShrimp.addEventListener("click", function() {
 modalClose.addEventListener("click", function() {
   modalBg.classList.remove("bg-active");
 });
-
-
-

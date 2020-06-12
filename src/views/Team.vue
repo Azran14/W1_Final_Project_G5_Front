@@ -9,7 +9,7 @@
     <div class="htp__infos">
       <img src="../assets/keyboard.svg" alt="keyboard" v-if="counter === 1" />
       <img
-        class="htp__submarine"
+        class="htp__submarineLight"
         v-if="counter === 3"
         src="../assets/ship.svg"
         alt="submarine"
@@ -61,6 +61,7 @@ export default {
       this.counter += 1;
     },
   },
+  move: function() {},
 };
 </script>
 
