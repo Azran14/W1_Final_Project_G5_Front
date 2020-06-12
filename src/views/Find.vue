@@ -1,6 +1,6 @@
 <template>
-  <div class="Move">
-    <div class="Move__container container">
+  <div class="Find">
+    <div class="Find__container container">
       <Title class="container__title" msg="FIND SPECIES" />
       <div class="container__infos">
         <Space class="container_space" />
@@ -22,7 +22,7 @@ import Options from "@/components/Options.vue";
 import Space from "@/components/Space.vue";
 
 export default {
-  name: "Move",
+  name: "Find",
   components: {
     Title,
     Submarine,
@@ -34,7 +34,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.Move {
+.Find {
   display: flex;
   align-items: center;
   justify-content: center;
