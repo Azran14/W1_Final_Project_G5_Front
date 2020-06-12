@@ -7,6 +7,7 @@ import Modal from "../views/Modal.vue";
 import Htp from "../views/Htp.vue";
 import Move from "../views/Move.vue";
 import Find from "../views/Find.vue";
+import Research from "../views/Research.vue";
 
 Vue.use(VueRouter);
 
@@ -47,6 +48,11 @@ const routes = [
     path: "/find",
     name: "Find",
     component: Find,
+  },
+  {
+    path: "/research",
+    name: "Research",
+    component: Research,
   },
 ];
 

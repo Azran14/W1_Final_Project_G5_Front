@@ -1,7 +1,5 @@
 <template>
-  <a href="move" @click="next()">
-    <img src="../assets/shipnolight.svg" alt="ship"
-  /></a>
+  <a href="move"> <img src="../assets/shipnolight.svg" alt="ship"/></a>
 </template>
 
 <script>
@@ -9,16 +7,10 @@ export default {
   name: "Submarine",
   data() {
     return {
-      actualPage: "move",
-      page: ["move", "find", "search"],
-      count: 0,
+      // pages: ["move", "find", "search"],
+      // page: page == pages[0] ? pages[1] : page == pages[1] ? page[2] : page,
+      //
     };
-  },
-  methods: {
-    next: function() {
-      this.actualPage = this.page[this.count];
-      this.count++;
-    },
   } /* <img :src="'/path/to/images/' + fileName"> */,
 };
 </script>
