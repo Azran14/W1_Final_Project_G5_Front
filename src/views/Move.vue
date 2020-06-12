@@ -1,13 +1,15 @@
 <template>
-  <div class="htpOne">
-    <div class="htpOne__container container">
-      <Title class="container__title" msg="EXPLORE THE OCEAN" />
+  <div class="Move">
+    <div class="Move__container container">
+      <Title class="container__title" msg="MOVE THE SUBMARINE" />
       <div class="container__infos">
+        <Keyboard class="container__keyboard" />
         <Submarine class="container__submarine" />
+        <Wasd class="container__wasd" />
       </div>
       <Subinfos
         class="container__subinfos"
-        text="Take place in the submarine"
+        text="Move the submarine using the arrow keys or WASD"
       />
     </div>
     <Options />
@@ -18,20 +20,24 @@ import Title from "@/components/Title.vue";
 import Submarine from "@/components/Submarine.vue";
 import Subinfos from "@/components/Subinfos.vue";
 import Options from "@/components/Options.vue";
+import Wasd from "@/components/Wasd.vue";
+import Keyboard from "@/components/Keyboard.vue";
 
 export default {
-  name: "Htp",
+  name: "Move",
   components: {
     Title,
     Submarine,
     Subinfos,
     Options,
+    Wasd,
+    Keyboard,
   },
 };
 </script>
 
 <style scoped lang="scss">
-.htpOne {
+.Move {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -46,6 +52,11 @@ export default {
   align-items: center;
   font-family: "poppins";
   color: #fefcd0;
+  &__infos {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
   &__title {
     font-size: 64px;
     font-weight: 900;

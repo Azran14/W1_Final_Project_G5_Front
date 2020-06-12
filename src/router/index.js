@@ -5,6 +5,8 @@ import Team from "../views/Team.vue";
 import Contact from "../views/Contact.vue";
 import Modal from "../views/Modal.vue";
 import Htp from "../views/Htp.vue";
+import Move from "../views/Move.vue";
+import Find from "../views/Find.vue";
 
 Vue.use(VueRouter);
 
@@ -35,6 +37,16 @@ const routes = [
     path: "/htp",
     name: "Htp",
     component: Htp,
+  },
+  {
+    path: "/move",
+    name: "Move",
+    component: Move,
+  },
+  {
+    path: "/find",
+    name: "Find",
+    component: Find,
   },
 ];
 
