@@ -1,7 +1,5 @@
 <template>
-  <router-link :to="pages[count++]">
-    <img src="../assets/shipnolight.svg" alt="ship" />
-  </router-link>
+  <img src="../assets/shipnolight.svg" alt="ship" />
 </template>
 
 <script>

@@ -3,7 +3,9 @@
     <div class="htpOne__container container">
       <Title class="container__title" msg="EXPLORE THE OCEAN" />
       <div class="container__infos">
-        <Submarine class="container__submarine" />
+        <router-link to="move">
+          <Submarine class="container__submarine" />
+        </router-link>
       </div>
       <Subinfos
         class="container__subinfos"
