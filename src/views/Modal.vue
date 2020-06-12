@@ -12,17 +12,26 @@
     </transition>
     <transition name="slide" appear>
       <div class="modal" v-if="showModal" v-on:click="stopScroll">
-        <h2 class="cc">{{ subtitle }}</h2>
-        <h3>longevity :</h3>
-        <p>{{ longevityText }}</p>
-        <h3>reproduction :</h3>
-        <p>{{ reproductionText }}</p>
-        <img v-bind:src="imageSrc" />
-        <p>{{ message }}</p>
-        <h4>Weight :</h4>
-        <p>{{ weightValue }}</p>
-        <h4>Size :</h4>
-        <p>{{ sizeValue }}</p>
+        <img class="bg__ship" src="../assets/shipnolight.svg" />
+        <img class="bg__longevity" src="../assets/dead.svg" />
+        <img class="bg__sound" src="../assets/mic.svg" />
+        <img class="bg__buble--text" src="../assets/bubletext.svg" />
+        <img class="bg__arrow--down" src="../assets/arrowd.svg" />
+        <img class="bg__arrow--up" src="../assets/arrowu.svg" />
+        <h2 :style="styleh2" class="cc">{{ subtitle }}</h2>
+        <h3 :style="styleh3">longevity :</h3>
+        <p :style="stylep">{{ longevityText }}</p>
+        <h3 :style="styleh3">reproduction :</h3>
+        <p :style="stylep">{{ reproductionText }}</p>
+        <p :style="stylep">{{ message }}</p>
+        <h4 :style="styleh4">Weight :</h4>
+        <p :style="stylep">{{ weightValue }}</p>
+        <h4 :style="styleh4">Size :</h4>
+        <p :style="stylep">{{ sizeValue }}</p>
+        <img class="bg__seaweed" src="../assets/seaweed.svg" />
+        <img class="bg__buble" src="../assets/buble.svg" />
+        <img class="bg__buble--top" src="../assets/otherbuble.svg" />
+        <img class="bg__fish" v-bind:src="imageSrc" />
         <span class="span" @click="showModal = false"
           ><img
             class="closePop"
@@ -35,37 +44,68 @@
 </template>
 
 <script>
-import imageSrc from '../assets/dolphin.svg'
+import imageSrc from "../assets/dolphin.svg";
 
 export default {
-    data(){
-        return{
-            subtitle : 'YVETTE THE PINK SHRIMP',
-            showModal: false,
-            imageSrc : imageSrc,
-            longevityText: '2 years ',
-            reproductionText : 'The females lay 50,000 to 1 million eggs, which hatch after some 24 hours.',
-            message: 'Hi, my name is Yvette . I am from the pandalidae family and I am a crustacean',
-            weightValue: '10g',
-            sizeValue: 'Around 5 to 10cm',
-        }
-    },
+  data() {
+    return {
+      subtitle: "YVETTE THE PINK SHRIMP",
+      showModal: false,
+      imageSrc: imageSrc,
+      longevityText: "2 years ",
+      reproductionText:
+        "The females lay 50,000 to 1 million eggs, which hatch after some 24 hours.",
+      message:
+        "Hi, my name is Yvette . I am from the pandalidae family and I am a crustacean",
+      weightValue: "10g",
+      sizeValue: "Around 5 to 10cm",
+      styleh2: {
+        fontSize: "40px",
+        fontWeight: "bold",
+        fontFamily: "poppins",
+        lineHeight: "60px",
+        color: "#FEFCD0",
+        letterSpacing: "0.1em",
+      },
+      styleh3: {
+        fontFamily: "Poppins",
+        fontWeight: "bold",
+        fontSize: "24px",
+        lineHeight: "36px",
+        color: "#FEFCD0",
+      },
+      styleh4: {
+        fontFamily: "Poppins",
+        fontWeight: "bold",
+        fontSize: "18px",
+        lineHeight: "27px",
+        color: "#FEFCD0",
+      },
+      stylep: {
+        color: "#FFFFFF",
+        fontSize: "18px",
+        fontWeight: "normal",
+        fontFamily: "poppins",
+        lineHeight: "27px",
+      },
+    };
+  },
 
-    watch: {
-        showModal: function() {
-            if(this.showModal){
-                document.documentElement.style.overflow = 'hidden';
-                return;
+  watch: {
+    showModal: function() {
+      if (this.showModal) {
+        document.documentElement.style.overflow = "hidden";
+        return;
       }
-      document.documentElement.style.overflow = 'auto';
-    }
-  }
-}
+      document.documentElement.style.overflow = "auto";
+    },
+  },
+};
 </script>
 
 <style lang="scss" scoped>
-::-webkit-scrollbar{
-    display: none;
+::-webkit-scrollbar {
+  display: none;
 }
 .bg {
   background: url("../assets/bg.png");
@@ -103,19 +143,40 @@ export default {
     background-color: #3594ae;
     border-radius: 10px;
     padding: 25px;
-    border: 2px solid #fefcd0;
+    border: 4px solid #fefcd0;
   }
   h2 {
-    color: white;
     margin-bottom: 65px;
-    font-size: 32px;
-    font-weight: 900;
   }
   p {
-    color: white;
-    font-size: 18px;
-    font-weight: 400;
     margin-bottom: 15px;
+  }
+  .bg__ship {
+    position: absolute;
+    top: -20px;
+    left: -10px;
+  }
+  .bg__seaweed {
+    position: fixed;
+    bottom: 0px;
+    right: 10px;
+  }
+  .bg__buble {
+    position: fixed;
+    top: 210px;
+    left: 110px;
+  }
+  .bg__buble--top {
+    position: fixed;
+    top: 20px;
+    right: 60px;
+  }
+  .bg__fish {
+    position: fixed;
+    top: 300px;
+    left: 50px;
+    width: 400px;
+    height: 400px;
   }
   .slide-enter-active,
   .slide-leave-active {
@@ -126,5 +187,4 @@ export default {
     transform: translateY(-50%) translateX(100vw);
   }
 }
-
 </style>
