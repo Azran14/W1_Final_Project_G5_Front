@@ -1,5 +1,6 @@
 <template>
   <div class="bg">
+    <img v-if="showModal" class="bg__ship" src="../assets/shipnolight.svg" />
     <span class="span" @click="showModal = true">
       <img class="modal-dolphin" srcset="../assets/dolphin.svg"
     /></span>
@@ -12,26 +13,32 @@
     </transition>
     <transition name="slide" appear>
       <div class="modal" v-if="showModal" v-on:click="stopScroll">
-        <img class="bg__ship" src="../assets/shipnolight.svg" />
+        <h2 :style="styleh2">{{ subtitle }}</h2>
+        <div class="grid__longevity">
+          <h3 :style="styleh3">Longevity : {{ longevityText }}</h3>
+        </div>
+        <div class="grid__reproduction">
+          <h3 :style="styleh3">Reproduction :</h3>
+          <p :style="stylep">{{ reproductionText }}</p>
+        </div>
+        <div class="grid__sound">
+          <h4 :style="styleh4">Click {{ soundText }}</h4>
+        </div>
+        <div class="grid__weight">
+          <h4 :style="styleh4">Weight : {{ weightValue }}</h4>
+        </div>
+        <div class="grid__size">
+          <h4 :style="styleh4">Size : {{ sizeValue }}</h4>
+        </div>
+        <img class="bg__seaweed" src="../assets/seaweed.svg" />
+        <img class="bg__buble" src="../assets/buble.svg" />
+        <img class="bg__buble--top" src="../assets/otherbuble.svg" />
+        <img class="bg__fish" v-bind:src="imageSrc" />
         <img class="bg__longevity" src="../assets/dead.svg" />
         <img class="bg__sound" src="../assets/mic.svg" />
         <img class="bg__buble--text" src="../assets/bubletext.svg" />
         <img class="bg__arrow--down" src="../assets/arrowd.svg" />
         <img class="bg__arrow--up" src="../assets/arrowu.svg" />
-        <h2 :style="styleh2" class="cc">{{ subtitle }}</h2>
-        <h3 :style="styleh3">longevity :</h3>
-        <p :style="stylep">{{ longevityText }}</p>
-        <h3 :style="styleh3">reproduction :</h3>
-        <p :style="stylep">{{ reproductionText }}</p>
-        <p :style="stylep">{{ message }}</p>
-        <h4 :style="styleh4">Weight :</h4>
-        <p :style="stylep">{{ weightValue }}</p>
-        <h4 :style="styleh4">Size :</h4>
-        <p :style="stylep">{{ sizeValue }}</p>
-        <img class="bg__seaweed" src="../assets/seaweed.svg" />
-        <img class="bg__buble" src="../assets/buble.svg" />
-        <img class="bg__buble--top" src="../assets/otherbuble.svg" />
-        <img class="bg__fish" v-bind:src="imageSrc" />
         <span class="span" @click="showModal = false"
           ><img v-bind:src="closeImg" class="closePop"/></span>
            <div class="progress">
@@ -65,9 +72,10 @@ export default {
       reproductionText:
         "The females lay 50,000 to 1 million eggs, which hatch after some 24 hours.",
       message:
-        "Hi, my name is Yvette . I am from the pandalidae family and I am a crustacean",
+        "Hi, my name is Yvette . I am from the pandalidae family and I am a crustacean.",
       weightValue: "10g",
       sizeValue: "Around 5 to 10cm",
+      soundText: "on the mic if you want to hear me.",
       styleh2: {
         fontSize: "40px",
         fontWeight: "bold",
@@ -141,29 +149,68 @@ export default {
   }
   .modal {
     position: fixed;
+    display: inline-grid;
+    grid-template-columns: 200px 250px 300px 2fr;
+    grid-template-rows: repeat(5, 20%);
+    grid-column-gap: 10px;
     top: 50%;
     left: 50%;
+    max-height: 80%;
     transform: translate(-50%, -50%);
     white-space: nowrap;
     width: 80%;
     overflow: auto;
     max-width: 80vw;
     min-height: 80vh;
-    background-color: #3594ae;
+    background-color: #4db2ce;
+    opacity: 80%;
     border-radius: 10px;
     padding: 25px;
     border: 4px solid #fefcd0;
   }
   h2 {
-    margin-bottom: 65px;
+    grid-column: 3 / span 2;
+    grid-row: 1 / 1;
+    justify-self: start;
   }
-  p {
-    margin-bottom: 15px;
+  .grid__longevity {
+    grid-column: 4 / 4;
+    grid-row: 2 / 2;
+    justify-self: start;
+  }
+  .grid__reproduction {
+    grid-column: 4 / 4;
+    grid-row: 3 / 3;
+    justify-self: start;
+    align-self: start;
+    h3 {
+      display: flex;
+      flex-direction: row;
+    }
+  }
+  .grid__sound {
+    grid-column: 4 / 4;
+    grid-row: 4 / 4;
+    justify-self: start;
+    align-self: start;
+  }
+  .grid__weight {
+    grid-column: 1 / 1;
+    grid-row: 1 / 1;
+    justify-self: end;
+    align-self: end;
+  }
+  .grid__size {
+    grid-column: 2 / 2;
+    grid-row: 4 / 4;
+    justify-self: start;
+    align-self: end;
   }
   .bg__ship {
-    position: absolute;
-    top: -20px;
-    left: -10px;
+    position: fixed;
+    z-index: 200;
+    top: 24px;
+    left: 100px;
   }
   .bg__seaweed {
     position: fixed;
@@ -171,21 +218,46 @@ export default {
     right: 10px;
   }
   .bg__buble {
-    position: fixed;
-    top: 210px;
-    left: 110px;
+    grid-column: 2 / span 2;
+    grid-row: 2 / span 2;
   }
   .bg__buble--top {
     position: fixed;
     top: 20px;
     right: 60px;
   }
+  .bg__buble--text {
+    grid-column: 2 / span 2;
+    grid-row: 2 / span 2;
+    justify-self: end;
+  }
   .bg__fish {
-    position: fixed;
-    top: 300px;
-    left: 50px;
-    width: 400px;
-    height: 400px;
+    grid-column: 2 / 2;
+    grid-row: 3 / span 2;
+    justify-self: start;
+    align-self: start;
+  }
+  .bg__longevity {
+    grid-column: 3 / 3;
+    grid-row: 2 / 2;
+    justify-self: end;
+  }
+  .bg__sound {
+    grid-column: 3 / 3;
+    grid-row: 4 / 4;
+    justify-self: start;
+  }
+  .bg__arrow--up {
+    grid-column: 2 / 2;
+    grid-row: 4 / 4;
+    justify-self: end;
+    align-self: end;
+  }
+  .bg__arrow--down {
+    grid-column: 1 / 1;
+    grid-row: 2 / 2;
+    justify-self: end;
+    align-self: start;
   }
   .slide-enter-active,
   .slide-leave-active {
