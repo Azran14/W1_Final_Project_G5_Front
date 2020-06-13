@@ -66,7 +66,7 @@ export default {
       subtitle: "YVETTE THE PINK SHRIMP",
       showModal: false,
       imageSrc: imageSrc,
-      loseImg : closeImg,
+      closeImg : closeImg,
      progressImg : progressImg,
       longevityText: "2 years ",
       reproductionText:
@@ -270,7 +270,7 @@ export default {
 }
 .progress__item{
     position: fixed;
-    bottom: 2%;
+    bottom: -72%;
       left: 50%;
     transform: translate(-50%, -50%);
 }
