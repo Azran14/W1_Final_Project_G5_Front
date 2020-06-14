@@ -1,12 +1,19 @@
 <template>
-  <img :src="path" alt="animal" />
+  <img :srcset="getAnimal()" alt="animal" />
 </template>
 
 <script>
 export default {
   name: "AnimalModall",
-  props: {
-    str: String,
+  data() {
+    return {
+      animal: "dolphin.svg",
+    };
+  },
+  methods: {
+    getAnimal: function() {
+      return "../assets/" + this.animal;
+    },
   },
 };
 </script>
