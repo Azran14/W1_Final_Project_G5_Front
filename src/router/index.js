@@ -9,7 +9,12 @@ import Move from "../views/Move.vue";
 import Find from "../views/Find.vue";
 import Research from "../views/Research.vue";
 import Modall from "../views/Modall.vue";
+
+import Qcm from "../views/Qcm.vue";
+
 import Video from "../views/Video.vue";
+
+
 
 Vue.use(VueRouter);
 
@@ -63,9 +68,16 @@ const routes = [
   },
 
   {
+    path: "/qcm",
+    name: "Qcm",
+    component: Qcm,
+
+
+  {
     path: "/Video",
     name: "Video",
     component: Video,
+
   },
 ];
 
