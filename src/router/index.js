@@ -9,6 +9,7 @@ import Move from "../views/Move.vue";
 import Find from "../views/Find.vue";
 import Research from "../views/Research.vue";
 import Modall from "../views/Modall.vue";
+import Video from "../views/Video.vue";
 
 Vue.use(VueRouter);
 
@@ -59,6 +60,12 @@ const routes = [
     path: "/Modall",
     name: "Modall",
     component: Modall,
+  },
+
+  {
+    path: "/Video",
+    name: "Video",
+    component: Video,
   },
 ];
 
