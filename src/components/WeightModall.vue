@@ -1,10 +1,10 @@
 <template>
-  <h1>{{ msg }}</h1>
+  <h4>Weight : {{ msg }}</h4>
 </template>
 
 <script>
 export default {
-  name: "Title",
+  name: "WeightModall",
   props: {
     msg: String,
   },

@@ -1,12 +1,12 @@
 <template>
-  <h1>{{ msg }}</h1>
+  <img :src="path" alt="animal" />
 </template>
 
 <script>
 export default {
-  name: "Title",
+  name: "AnimalModall",
   props: {
-    msg: String,
+    str: String,
   },
 };
 </script>

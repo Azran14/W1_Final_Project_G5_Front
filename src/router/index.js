@@ -8,6 +8,7 @@ import Htp from "../views/Htp.vue";
 import Move from "../views/Move.vue";
 import Find from "../views/Find.vue";
 import Research from "../views/Research.vue";
+import Modall from "../views/Modall.vue";
 
 Vue.use(VueRouter);
 
@@ -53,6 +54,11 @@ const routes = [
     path: "/research",
     name: "Research",
     component: Research,
+  },
+  {
+    path: "/Modall",
+    name: "Modall",
+    component: Modall,
   },
 ];
 
