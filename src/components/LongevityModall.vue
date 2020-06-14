@@ -1,10 +1,10 @@
 <template>
-  <h1>{{ msg }}</h1>
+  <h3><span> Longevity :</span> {{ msg }}</h3>
 </template>
 
 <script>
 export default {
-  name: "Title",
+  name: "LongevityModall",
   props: {
     msg: String,
   },
