@@ -261,11 +261,11 @@ export default {
   }
   .slide-enter-active,
   .slide-leave-active {
-    transition: transform 1s;
+    transition: transform 0.8s;
   }
   .slide-enter,
   .slide-leave-to {
-    transform: translateY(-50%) translateX(100vw);
+    transform: translate(-50%, -50%) scale(0.01);
   }
 }
 .progress__item{
