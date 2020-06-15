@@ -1,25 +1,27 @@
 <template>
   <div class="answer">
     <div class="answer__contain">
-      <img src="./../../assets/shell.svg" alt="shell" />
+      <AnswerImage />
       <p class="answer__text">{{ asr1 }}</p>
     </div>
     <div class="answer__contain">
-      <img src="./../../assets/shell.svg" alt="shell" />
+      <AnswerImage />
       <p class="answer__text">{{ asr2 }}</p>
     </div>
     <div class="answer__contain">
-      <img src="./../../assets/shell.svg" alt="shell" />
+      <AnswerImage />
       <p class="answer__text">{{ asr3 }}</p>
     </div>
     <div class="answer__contain">
-      <img src="./../../assets/shell.svg" alt="shell" />
+      <AnswerImage />
       <p class="answer__text">{{ asr4 }}</p>
     </div>
   </div>
 </template>
 
 <script>
+import AnswerImage from "@/components/cmq/AnswerImage.vue";
+
 export default {
   name: "answer",
   props: {
@@ -27,6 +29,9 @@ export default {
     asr2: String,
     asr3: String,
     asr4: String,
+  },
+  components: {
+    AnswerImage,
   },
 };
 </script>

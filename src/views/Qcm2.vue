@@ -11,7 +11,7 @@
         asr1="350 years"
         asr2="250 years"
         asr3="150 years"
-        asr4="450 years "
+        asr4="450 years"
       />
     </div>
     <Question

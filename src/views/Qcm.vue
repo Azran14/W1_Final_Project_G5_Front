@@ -55,6 +55,11 @@ export default {
     Answer,
     QuestionTitle,
   },
+  methods:{
+ green: function () {
+   
+ }
+  }
 };
 </script>
 
