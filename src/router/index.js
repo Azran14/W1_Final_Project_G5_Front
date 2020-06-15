@@ -10,6 +10,7 @@ import Find from "../views/Find.vue";
 import Research from "../views/Research.vue";
 import Modall from "../views/Modall.vue";
 import Map from "../views/Map.vue";
+import Info from "../views/Info.vue";
 
 import Qcm from "../views/Qcm.vue";
 
@@ -80,6 +81,11 @@ const routes = [
     path: "/Map",
     name: "Map",
     component: Map,
+  },
+  {
+    path: "/Info",
+    name: "Info",
+    component: Info,
   },
 ];
 
