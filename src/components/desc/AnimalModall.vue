@@ -1,5 +1,7 @@
 <template>
-  <img :srcset="getAnimal()" alt="animal" />
+  <div class="test">
+    <img :src="getAnimal()" />
+  </div>
 </template>
 
 <script>
@@ -7,12 +9,13 @@ export default {
   name: "AnimalModall",
   data() {
     return {
-      animal: "dolphin.svg",
+      text: "dolphin",
     };
   },
   methods: {
     getAnimal: function() {
-      return "../../assets/" + this.animal;
+      const fileName = this.text;
+      return `../../assets/${fileName}.svg`;
     },
   },
 };
