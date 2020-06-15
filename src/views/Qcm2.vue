@@ -1,6 +1,6 @@
 <template>
   <div class="questionOne">
-    <h1 class="question0ne__title">QUESTIONS</h1>
+    <QuestionTitle/>
     <Question
       class="question__container"
       qst="What is the lifespan of a plastic bag in the ocean ?"
@@ -44,43 +44,39 @@
 </template>
 
 <script>
-import Question from "@/components/Question.vue";
-import Answer from "@/components/Answer.vue";
+import Question from "@/components/cmq/Question.vue";
+import Answer from "@/components/cmq/Answer.vue";
+import QuestionTitle from "@/components/cmq/QuestionTitle.vue";
 
 export default {
-  name: "Qcm",
+  name: "Qcm2",
   components: {
     Question,
     Answer,
+    QuestionTitle,
   },
 };
 </script>
 
 <style scoped lang="scss">
-.question0ne__title {
-  color: #fefcd0;
-  font-weight: 900;
-  font-size: 40px;
-  margin-bottom: 24px;
-}
 .question__container {
   font-size: 24px;
   font-weight: 700;
   color: #fefcd0;
   display: block;
   margin: auto;
-  width: 670px;
+  width: 600px;
   text-align: left;
-  margin-bottom: 24px;
+  margin-bottom: 8px;
 }
 .answer__container {
   margin: auto;
-  width: 670px;
+  width: 500px;
   margin-bottom: 40px;
-  .answer__item{
-    font-size: 16px;
-    color: #fefcd0;
-    font-weight: 600;
+  .answer__item {
+    font-size: 18px;
+    color: #ffffff;
+    font-weight: 400;
   }
 }
 </style>
