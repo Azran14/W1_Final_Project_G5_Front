@@ -3,41 +3,41 @@
     <h1 class="question0ne__title">QUESTIONS</h1>
     <Question
       class="question__container"
-      qst="What is the lifespan of a shrimp ?"
+      qst="What is the lifespan of a plastic bag in the ocean ?"
     />
     <div class="answer__container">
       <Answer
         class="answer__one answer__item"
-        asr1="1 years"
-        asr2="3 years"
-        asr3="2 years"
-        asr4="5 years"
+        asr1="350 years"
+        asr2="250 years"
+        asr3="150 years"
+        asr4="450 years "
       />
     </div>
     <Question
       class="question__container"
-      qst="What is the average speed of the dolphin ?"
+      qst="Where does the regalec lives ?"
     />
     <div class="answer__container">
       <Answer
         class="answer__one answer__item"
-        asr1="35 km/h"
-        asr2="60 km/h"
-        asr3="45 km/h"
-        asr4="15 km/h"
+        asr1="Pacific and Atlantic"
+        asr2="Artic and pacific"
+        asr3="Artic and Antarctic"
+        asr4="Atlantic and Indian"
       />
     </div>
     <Question
       class="question__container"
-      qst="What is the animal that most scares the humpback whale ?"
+      qst="What is the size of the giant squid ?"
     />
     <div class="answer__container">
       <Answer
         class="answer__one answer__item"
-        asr1="White Shark"
-        asr2="Schrimp"
-        asr3="Orca"
-        asr4="Dolphin"
+        asr1="10 to 13 m"
+        asr2="7 to 10 m"
+        asr3="13 to 16 m"
+        asr4="4 to 7 m"
       />
     </div>
   </div>

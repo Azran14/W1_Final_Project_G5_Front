@@ -11,7 +11,7 @@ import Research from "../views/Research.vue";
 import Modall from "../views/Modall.vue";
 
 import Qcm from "../views/Qcm.vue";
-
+import Qcm2 from "../views/Qcm2.vue";
 import Video from "../views/Video.vue";
 
 
@@ -71,12 +71,18 @@ const routes = [
     path: "/qcm",
     name: "Qcm",
     component: Qcm,
-
+  },
 
   {
     path: "/Video",
     name: "Video",
     component: Video,
+
+  },
+  {
+    path: "/qcm2",
+    name: "Qcm2",
+    component: Qcm2,
 
   },
 ];
