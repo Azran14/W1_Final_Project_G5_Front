@@ -11,7 +11,6 @@ import Research from "../views/Research.vue";
 import Modall from "../views/Modall.vue";
 import Game from "../views/Game.vue";
 import Map from "../views/Map.vue";
-import Info from "../views/Info.vue";
 
 import Qcm from "../views/Qcm.vue";
 import Qcm2 from "../views/Qcm2.vue";
@@ -88,11 +87,6 @@ const routes = [
     path: "/Map",
     name: "Map",
     component: Map,
-  },
-  {
-    path: "/Info",
-    name: "Info",
-    component: Info,
   },
   {
     path: "/qcm2",
