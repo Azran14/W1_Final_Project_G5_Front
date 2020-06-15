@@ -1,9 +1,21 @@
 <template>
   <div class="answer">
-    <p>{{ asr1 }}</p>
-    <p>{{ asr2 }}</p>
-    <p>{{ asr3 }}</p>
-    <p>{{ asr4 }}</p>
+    <div class="answer__contain">
+      <img src="../assets/shell.svg" alt="shell" />
+      <p class="answer__text">{{ asr1 }}</p>
+    </div>
+    <div class="answer__contain">
+      <img src="../assets/shell.svg" alt="shell" />
+      <p class="answer__text">{{ asr2 }}</p>
+    </div>
+    <div class="answer__contain">
+      <img src="../assets/shell.svg" alt="shell" />
+      <p class="answer__text">{{ asr3 }}</p>
+    </div>
+    <div class="answer__contain">
+      <img src="../assets/shell.svg" alt="shell" />
+      <p class="answer__text">{{ asr4 }}</p>
+    </div>
   </div>
 </template>
 
@@ -20,8 +32,15 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.answer{
-    display: flex;
-    justify-content: space-between;
+.answer {
+  display: flex;
+  justify-content: space-between;
+}
+.answer__contain {
+  display: flex;
+}
+
+.answer__text {
+  margin-top: 12px;
 }
 </style>

@@ -1,6 +1,6 @@
 <template>
   <div class="questionOne">
-    <h1 class="question0ne__title">QUESTIONS</h1>
+    <QuestionTitle/>
     <Question
       class="question__container"
       qst="What is the lifespan of a shrimp ?"
@@ -46,23 +46,19 @@
 <script>
 import Question from "@/components/Question.vue";
 import Answer from "@/components/Answer.vue";
+import QuestionTitle from "@/components/QuestionTitle.vue"
 
 export default {
   name: "Qcm",
   components: {
     Question,
     Answer,
+    QuestionTitle,
   },
 };
 </script>
 
 <style scoped lang="scss">
-.question0ne__title {
-  color: #fefcd0;
-  font-weight: 900;
-  font-size: 40px;
-  margin-bottom: 24px;
-}
 .question__container {
   font-size: 24px;
   font-weight: 700;
@@ -71,16 +67,16 @@ export default {
   margin: auto;
   width: 670px;
   text-align: left;
-  margin-bottom: 24px;
+  margin-bottom: 8px;
 }
 .answer__container {
   margin: auto;
   width: 670px;
   margin-bottom: 40px;
-  .answer__item{
-    font-size: 16px;
-    color: #fefcd0;
-    font-weight: 600;
+  .answer__item {
+    font-size: 18px;
+    color: #ffffff;
+    font-weight: 400;
   }
 }
 </style>

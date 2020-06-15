@@ -1,43 +1,43 @@
 <template>
   <div class="questionOne">
-    <QuestionTitle/>
+    <QuestionTitle />
     <Question
       class="question__container"
-      qst="What is the lifespan of a plastic bag in the ocean ?"
+      qst="What is the weight of the Dumbo octopus ?"
     />
     <div class="answer__container">
       <Answer
         class="answer__one answer__item"
-        asr1="350 years"
-        asr2="250 years"
-        asr3="150 years"
-        asr4="450 years "
+        asr1="250 g"
+        asr2="2 kg"
+        asr3="500 g"
+        asr4="1 kg"
       />
     </div>
     <Question
       class="question__container"
-      qst="Where does the regalec lives ?"
+      qst="What is the family of the scotoplanes ?"
     />
     <div class="answer__container">
       <Answer
         class="answer__one answer__item"
-        asr1="Pacific and Atlantic"
-        asr2="Artic and pacific"
-        asr3="Artic and Antarctic"
-        asr4="Atlantic and Indian"
+        asr1="Elpidiidae"
+        asr2="Amiidea"
+        asr3="rhincodontidaec"
+        asr4="pandalidae "
       />
     </div>
     <Question
       class="question__container"
-      qst="What is the size of the giant squid ?"
+      qst="What pollutes our oceans the most?"
     />
     <div class="answer__container">
       <Answer
         class="answer__one answer__item"
-        asr1="10 to 13 m"
-        asr2="7 to 10 m"
-        asr3="13 to 16 m"
-        asr4="4 to 7 m"
+        asr1="Oil"
+        asr2="Plastic"
+        asr3="Radioactive waste"
+        asr4="All"
       />
     </div>
   </div>
@@ -69,7 +69,7 @@ export default {
 }
 .answer__container {
   margin: auto;
-  width: 500px;
+  width: 600px;
   margin-bottom: 40px;
   .answer__item {
     font-size: 18px;
