@@ -9,6 +9,7 @@ import Move from "../views/Move.vue";
 import Find from "../views/Find.vue";
 import Research from "../views/Research.vue";
 import Modall from "../views/Modall.vue";
+import Game from "../views/Game.vue";
 
 import Qcm from "../views/Qcm.vue";
 
@@ -74,6 +75,11 @@ const routes = [
     path: "/Video",
     name: "Video",
     component: Video,
+  },
+  {
+    path: "/game",
+    name: "Game",
+    component: Game,
   },
 ];
 
