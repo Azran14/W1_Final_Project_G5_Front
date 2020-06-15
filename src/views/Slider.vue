@@ -69,11 +69,6 @@ export default {
   opacity: 0;
 }
 
-img {
-  height: 600px;
-  width: 100%;
-}
-
 .prev,
 .next {
   cursor: pointer;
