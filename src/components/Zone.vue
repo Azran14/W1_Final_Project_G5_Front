@@ -1,7 +1,12 @@
 <template>
   <section>
     <div class="container">
-      <div v-for="img_link in fishData" :key="img_link" class="animal"></div>
+      <div
+        v-for="fish in fishData"
+        :key="fish"
+        class="animal"
+        :id="fish.img_link"
+      ></div>
     </div>
   </section>
 </template>
@@ -26,10 +31,9 @@ export default {
 };
 </script>
 <style scoped lang="scss">
-//  $marginArray [""]
 @for $i from 1 through 5 {
   .animal:nth-child(#{$i}) {
-    margin-left: random(18) * $i + vw;
+    transform: translateX((random(60) - 30 + vw));
   }
 }
 .animal {
@@ -43,6 +47,7 @@ export default {
   width: 90%;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 section {
   border: solid 2px green;
