@@ -12,7 +12,7 @@ export default {
   },
   methods: {
     getAnimal: function() {
-      return "../assets/" + this.animal;
+      return "../../assets/" + this.animal;
     },
   },
 };

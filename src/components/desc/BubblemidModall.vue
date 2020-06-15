@@ -1,5 +1,5 @@
 <template>
-  <img src="../assets/bubblemid.svg" alt="Bubble mid" />
+  <img src="../../assets/bubblemid.svg" alt="Bubble mid" />
 </template>
 
 <script>

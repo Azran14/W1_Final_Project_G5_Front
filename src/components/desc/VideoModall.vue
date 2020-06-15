@@ -12,7 +12,7 @@ export default {
   },
   methods: {
     getVideo: function() {
-      return "../assets/video/" + this.video;
+      return "../../assets/video/" + this.video;
     },
   },
 };

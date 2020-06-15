@@ -1,33 +1,26 @@
 <template>
   <div class="modall">
-    <div class="modall__title">
-      <TitleModall :msg="this.modalDataVideo.subtitle" />
-    </div>
-    <VideoModall class="modall__video" />
+    <MapModall class="modall__map" />
     <BubblemidModall class="modall__bubbleMid" />
     <BubbletopModall class="modall__bubbleTop" />
   </div>
 </template>
 
 <script>
-import TitleModall from "@/components/desc/TitleModall.vue";
-import VideoModall from "@/components/desc/VideoModall.vue";
 import BubblemidModall from "@/components/desc/BubblemidModall.vue";
 import BubbletopModall from "@/components/desc/BubbletopModall.vue";
+import MapModall from "@/components/map/MapModall.vue";
 
 export default {
-  name: "Video",
+  name: "map",
   components: {
-    TitleModall,
-    VideoModall,
     BubblemidModall,
     BubbletopModall,
+    MapModall,
   },
   data() {
     return {
-      modalDataVideo: {
-        subtitle: "YVETTE THE PINK SHRIMP",
-      },
+      modalMap: {},
     };
   },
 };
@@ -56,23 +49,6 @@ export default {
   border: 4px solid #fefcd0;
   color: #fefcd0;
   font-family: "poppins";
-
-  &__title {
-    font-size: 40px;
-    font-weight: bold;
-    line-height: 60px;
-    letter-spacing: 0.1em;
-    grid-column: 2 / 2;
-    grid-row: 1 / 1;
-    text-align: center;
-  }
-  &__video {
-    grid-column: 1 / span 3;
-    grid-row: 1 / span 3;
-    justify-self: center;
-    align-self: center;
-    width: 70%;
-  }
   &__bubbleMid {
     grid-column: 1 / 1;
     grid-row: 2 / span 2;
@@ -84,5 +60,18 @@ export default {
     grid-row: 1 / 1;
     justify-self: end;
   }
+  &__map {
+    grid-column: 1 / span 3;
+    grid-row: 1 / span 3;
+    justify-self: center;
+    align-self: center;
+    width: 90%;
+  }
+  /*&__seaweed {
+    grid-column: 3 / 3;
+    grid-row: 3 / 3;
+    justify-self: start;
+    align-self: end;
+  }*/
 }
 </style>

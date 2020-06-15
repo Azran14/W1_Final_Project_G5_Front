@@ -1,10 +1,10 @@
 <template>
-  <img src="../assets/bubletext.svg" alt="Bubble" />
+  <img src="../../assets/arrowu.svg" alt="Bubble" />
 </template>
 
 <script>
 export default {
-  name: "IdentityModall",
+  name: "ArrowupModall",
 };
 </script>
 <style scoped lang="scss"></style>

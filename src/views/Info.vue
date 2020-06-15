@@ -1,44 +1,49 @@
 <template>
   <div class="modall">
     <div class="modall__title">
-      <TitleModall :msg="this.modalDataVideo.subtitle" />
+      <TitleModall :msg="this.modalData.subtitle" />
     </div>
-    <VideoModall class="modall__video" />
+    <AnimalModall class="modall__animal" />
     <BubblemidModall class="modall__bubbleMid" />
     <BubbletopModall class="modall__bubbleTop" />
+    <BubbleModall class="modall__bubble" />
+    <SubmarineLight class="modall__submarine" />
   </div>
 </template>
 
 <script>
-import TitleModall from "@/components/desc/TitleModall.vue";
-import VideoModall from "@/components/desc/VideoModall.vue";
 import BubblemidModall from "@/components/desc/BubblemidModall.vue";
 import BubbletopModall from "@/components/desc/BubbletopModall.vue";
+import TitleModall from "@/components/desc/TitleModall.vue";
+import AnimalModall from "@/components/desc/AnimalModall.vue";
+import BubbleModall from "@/components/desc/BubbleModall.vue";
+import SubmarineLight from "@/components/desc/BubbleModall.vue";
 
 export default {
-  name: "Video",
+  name: "Info",
   components: {
     TitleModall,
-    VideoModall,
     BubblemidModall,
     BubbletopModall,
+    AnimalModall,
+    BubbleModall,
+    SubmarineLight,
   },
   data() {
     return {
-      modalDataVideo: {
+      modalData: {
         subtitle: "YVETTE THE PINK SHRIMP",
       },
     };
   },
 };
 </script>
-
 <style scoped lang="scss">
 .modall {
   position: fixed;
   display: inline-grid;
-  grid-template-columns: 150px 3fr 150px;
-  grid-template-rows: 150px 2fr 150px;
+  grid-template-columns: 1fr 1fr 150px;
+  grid-template-rows: repeat(4, 25%);
   grid-column-gap: 10px;
   top: 50%;
   left: 50%;
@@ -66,16 +71,15 @@ export default {
     grid-row: 1 / 1;
     text-align: center;
   }
-  &__video {
-    grid-column: 1 / span 3;
-    grid-row: 1 / span 3;
+  &__animal {
+    grid-column: 1 / 1;
+    grid-row: 2 / span 2;
     justify-self: center;
     align-self: center;
-    width: 70%;
   }
   &__bubbleMid {
     grid-column: 1 / 1;
-    grid-row: 2 / span 2;
+    grid-row: 4 / 4;
     justify-self: start;
     align-self: end;
   }
@@ -83,6 +87,12 @@ export default {
     grid-column: 3 / 3;
     grid-row: 1 / 1;
     justify-self: end;
+  }
+  &__bubble {
+    grid-column: 1 / 1;
+    grid-row: 2 / span 2;
+    justify-self: center;
+    align-self: center;
   }
 }
 </style>
