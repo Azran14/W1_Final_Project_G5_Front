@@ -90,11 +90,6 @@ const routes = [
     component: Map,
   },
   {
-    path: "/Info",
-    name: "Info",
-    component: Info,
-  },
-  {
     path: "/qcm2",
     name: "Qcm2",
     component: Qcm2,

@@ -45,10 +45,6 @@
     <div class="modall__bubbletop">
       <BubbletopModall />
     </div>
-
-    <div class="modall__seaweed">
-      <SeaweedModall />
-    </div>
   </div>
 </template>
 
@@ -66,7 +62,6 @@ import IdentityModall from "@/components/desc/IdentityModall.vue";
 import ArrowupModall from "@/components/desc/ArrowupModall.vue";
 import ArrowdownModall from "@/components/desc/ArrowdownModall.vue";
 import BubbletopModall from "@/components/desc/BubbletopModall.vue";
-import SeaweedModall from "@/components/desc/SeaweedModall.vue";
 
 export default {
   name: "Modall",
@@ -84,14 +79,13 @@ export default {
     ArrowupModall,
     ArrowdownModall,
     BubbletopModall,
-    SeaweedModall,
   },
   data() {
     return {
       modalData: {
         subtitle: "YVETTE THE PINK SHRIMP",
         showModal: false,
-        src: "dolphin.svg",
+        text: "dolphin.svg",
         longevityText: "2 years ",
 
         reproductionText:
@@ -213,13 +207,6 @@ export default {
   &__bubbletop {
     grid-column: 5 / 5;
     grid-row: 1 / 1;
-  }
-  &__seaweed {
-    grid-column: 5 / 5;
-    grid-row: 5 / 5;
-
-    justify-self: end;
-    align-self: end;
   }
 }
 </style>
