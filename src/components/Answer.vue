@@ -1,5 +1,10 @@
 <template>
-  <div class="answer">{{ asr1 }} {{ asr2 }} {{ asr3 }} {{ asr4 }}</div>
+  <div class="answer">
+    <p>{{ asr1 }}</p>
+    <p>{{ asr2 }}</p>
+    <p>{{ asr3 }}</p>
+    <p>{{ asr4 }}</p>
+  </div>
 </template>
 
 <script>
@@ -14,4 +19,9 @@ export default {
 };
 </script>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+.answer{
+    display: flex;
+    justify-content: space-between;
+}
+</style>
