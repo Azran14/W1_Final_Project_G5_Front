@@ -11,11 +11,11 @@ import Research from "../views/Research.vue";
 import Modall from "../views/Modall.vue";
 import Game from "../views/Game.vue";
 import Map from "../views/Map.vue";
-import Info from "../views/Info.vue";
 import Qcm from "../views/Qcm.vue";
 import Qcm2 from "../views/Qcm2.vue";
 import Video from "../views/Video.vue";
 import Qcm3 from "../views/Qcm3.vue";
+import Slider from "../views/Slider.vue";
 
 Vue.use(VueRouter);
 
@@ -79,7 +79,6 @@ const routes = [
     component: Video,
   },
   {
-
     path: "/game",
     name: "Game",
     component: Game,
@@ -98,7 +97,11 @@ const routes = [
     path: "/qcm3",
     name: "Qcm3",
     component: Qcm3,
-
+  },
+  {
+    path: "/Slider",
+    name: "Slider",
+    component: Slider,
   },
 ];
 
