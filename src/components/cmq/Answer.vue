@@ -1,19 +1,19 @@
 <template>
   <div class="answer">
     <div class="answer__contain">
-      <img src="../assets/shell.svg" alt="shell" />
+      <img src="./../../assets/shell.svg" alt="shell" />
       <p class="answer__text">{{ asr1 }}</p>
     </div>
     <div class="answer__contain">
-      <img src="../assets/shell.svg" alt="shell" />
+      <img src="./../../assets/shell.svg" alt="shell" />
       <p class="answer__text">{{ asr2 }}</p>
     </div>
     <div class="answer__contain">
-      <img src="../assets/shell.svg" alt="shell" />
+      <img src="./../../assets/shell.svg" alt="shell" />
       <p class="answer__text">{{ asr3 }}</p>
     </div>
     <div class="answer__contain">
-      <img src="../assets/shell.svg" alt="shell" />
+      <img src="./../../assets/shell.svg" alt="shell" />
       <p class="answer__text">{{ asr4 }}</p>
     </div>
   </div>

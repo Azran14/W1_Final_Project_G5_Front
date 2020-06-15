@@ -44,9 +44,9 @@
 </template>
 
 <script>
-import Question from "@/components/Question.vue";
-import Answer from "@/components/Answer.vue";
-import QuestionTitle from "@/components/QuestionTitle.vue"
+import Question from "@/components/cmq/Question.vue";
+import Answer from "@/components/cmq/Answer.vue";
+import QuestionTitle from "@/components/cmq/QuestionTitle.vue"
 
 export default {
   name: "Qcm",

@@ -44,14 +44,15 @@
 </template>
 
 <script>
-import Question from "@/components/Question.vue";
-import Answer from "@/components/Answer.vue";
-
+import Question from "@/components/cmq/Question.vue";
+import Answer from "@/components/cmq/Answer.vue";
+import QuestionTitle from "@/components/cmq/QuestionTitle.vue"
 export default {
-  name: "Qcm2",
+  name: "Qcm3",
   components: {
     Question,
     Answer,
+    QuestionTitle,
   },
 };
 </script>
