@@ -1,10 +1,10 @@
 <template>
-  <img src="../assets/arrowu.svg" alt="Bubble" />
+  <img src="../../assets/map-shrimp.svg" alt="Bubble" />
 </template>
 
 <script>
 export default {
-  name: "ArrowupModall",
+  name: "MapModall",
 };
 </script>
 <style scoped lang="scss"></style>

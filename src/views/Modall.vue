@@ -53,20 +53,20 @@
 </template>
 
 <script>
-import TitleModall from "@/components/TitleModall.vue";
-import WeightModall from "@/components/WeightModall.vue";
-import LongevityModall from "@/components/LongevityModall.vue";
-import AnimalModall from "@/components/AnimalModall.vue";
-import ReproductionModall from "@/components/ReproductionModall.vue";
-import SoundModall from "@/components/SoundModall.vue";
-import SizeModall from "@/components/SizeModall.vue";
-import MicModall from "@/components/MicModall.vue";
-import BubbleModall from "@/components/BubbleModall.vue";
-import IdentityModall from "@/components/IdentityModall.vue";
-import ArrowupModall from "@/components/ArrowupModall.vue";
-import ArrowdownModall from "@/components/ArrowdownModall.vue";
-import BubbletopModall from "@/components/BubbletopModall.vue";
-import SeaweedModall from "@/components/SeaweedModall.vue";
+import TitleModall from "@/components/desc/TitleModall.vue";
+import WeightModall from "@/components/desc/WeightModall.vue";
+import LongevityModall from "@/components/desc/LongevityModall.vue";
+import AnimalModall from "@/components/desc/AnimalModall.vue";
+import ReproductionModall from "@/components/desc/ReproductionModall.vue";
+import SoundModall from "@/components/desc/SoundModall.vue";
+import SizeModall from "@/components/desc/SizeModall.vue";
+import MicModall from "@/components/desc/MicModall.vue";
+import BubbleModall from "@/components/desc/BubbleModall.vue";
+import IdentityModall from "@/components/desc/IdentityModall.vue";
+import ArrowupModall from "@/components/desc/ArrowupModall.vue";
+import ArrowdownModall from "@/components/desc/ArrowdownModall.vue";
+import BubbletopModall from "@/components/desc/BubbletopModall.vue";
+import SeaweedModall from "@/components/desc/SeaweedModall.vue";
 
 export default {
   name: "Modall",

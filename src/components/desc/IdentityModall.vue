@@ -1,10 +1,10 @@
 <template>
-  <img src="../assets/mic.svg" alt="animal" />
+  <img src="../../assets/bubletext.svg" alt="Bubble" />
 </template>
 
 <script>
 export default {
-  name: "MicModall",
+  name: "IdentityModall",
 };
 </script>
 <style scoped lang="scss"></style>
