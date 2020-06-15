@@ -12,7 +12,7 @@ import Modall from "../views/Modall.vue";
 import Map from "../views/Map.vue";
 
 import Qcm from "../views/Qcm.vue";
-
+import Qcm2 from "../views/Qcm2.vue";
 import Video from "../views/Video.vue";
 
 Vue.use(VueRouter);
@@ -80,6 +80,12 @@ const routes = [
     path: "/Map",
     name: "Map",
     component: Map,
+  },
+  {
+    path: "/qcm2",
+    name: "Qcm2",
+    component: Qcm2,
+
   },
 ];
 
