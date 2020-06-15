@@ -9,12 +9,11 @@ import Move from "../views/Move.vue";
 import Find from "../views/Find.vue";
 import Research from "../views/Research.vue";
 import Modall from "../views/Modall.vue";
+import Map from "../views/Map.vue";
 
 import Qcm from "../views/Qcm.vue";
 import Qcm2 from "../views/Qcm2.vue";
 import Video from "../views/Video.vue";
-
-
 
 Vue.use(VueRouter);
 
@@ -72,12 +71,15 @@ const routes = [
     name: "Qcm",
     component: Qcm,
   },
-
   {
     path: "/Video",
     name: "Video",
     component: Video,
-
+  },
+  {
+    path: "/Map",
+    name: "Map",
+    component: Map,
   },
   {
     path: "/qcm2",

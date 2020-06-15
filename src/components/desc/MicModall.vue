@@ -1,10 +1,10 @@
 <template>
-  <img src="../assets/arrowd.svg" alt="Bubble" />
+  <img src="../../assets/mic.svg" alt="animal" />
 </template>
 
 <script>
 export default {
-  name: "ArrowdownModall",
+  name: "MicModall",
 };
 </script>
 <style scoped lang="scss"></style>

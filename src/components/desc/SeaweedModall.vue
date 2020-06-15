@@ -1,10 +1,10 @@
 <template>
-  <img src="../assets/otherbuble.svg" alt="Bubble Top" />
+  <img src="../../assets/seaweed.svg" alt="Sea Weed" />
 </template>
 
 <script>
 export default {
-  name: "BubbletopModall",
+  name: "SeaweedModall",
 };
 </script>
 <style scoped lang="scss"></style>
