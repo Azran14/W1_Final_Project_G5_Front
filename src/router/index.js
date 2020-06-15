@@ -14,8 +14,6 @@ import Qcm from "../views/Qcm.vue";
 
 import Video from "../views/Video.vue";
 
-
-
 Vue.use(VueRouter);
 
 // C'est dans la constante routes que vous définisez les différentes routes de votre projet
@@ -71,13 +69,11 @@ const routes = [
     path: "/qcm",
     name: "Qcm",
     component: Qcm,
-
-
+  },
   {
     path: "/Video",
     name: "Video",
     component: Video,
-
   },
 ];
 
