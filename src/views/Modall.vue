@@ -131,22 +131,14 @@ export default {
 </script>
 <style scoped lang="scss">
 .modall {
-  position: fixed;
   display: inline-grid;
-  grid-template-columns: 200px 250px 300px 400px 200px;
-  grid-template-rows: repeat(4, 20%) 24%;
+  grid-template-columns: 100px 200px 250px 300px 100px;
+  grid-template-rows: repeat(4, 15%) 15%;
   grid-column-gap: 10px;
-  top: 50%;
-  left: 50%;
-  max-height: 80%;
-  transform: translate(-50%, -50%);
   white-space: nowrap;
   width: 80%;
-  overflow: auto;
   max-width: 80vw;
   min-height: 80vh;
-  opacity: 80%;
-  border-radius: 10px;
   padding: 25px;
   color: #fefcd0;
   font-family: "poppins";
@@ -222,7 +214,7 @@ export default {
   }
   &__size {
     grid-column: 2 / 2;
-    grid-row: 4 / 4;
+    grid-row: 5 / 5;
     justify-self: start;
     align-self: end;
   }
@@ -244,7 +236,7 @@ export default {
   }
   &__arrowup {
     grid-column: 2 / 2;
-    grid-row: 4 / 4;
+    grid-row: 5 / 5;
     justify-self: end;
     align-self: end;
   }

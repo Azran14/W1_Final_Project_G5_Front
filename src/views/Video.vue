@@ -35,22 +35,13 @@ export default {
 
 <style scoped lang="scss">
 .modall {
-  position: fixed;
   display: inline-grid;
-  grid-template-columns: 150px 3fr 150px;
-  grid-template-rows: 150px 2fr 150px;
+  grid-template-columns: 150px 1fr 150px;
+  grid-template-rows: 100px 300px 150px;
   grid-column-gap: 10px;
-  top: 50%;
-  left: 50%;
-  max-height: 80%;
-  transform: translate(-50%, -50%);
   white-space: nowrap;
-  width: 80%;
-  overflow: auto;
   max-width: 80vw;
   min-height: 80vh;
-  opacity: 80%;
-  border-radius: 10px;
   padding: 25px;
   color: #fefcd0;
   font-family: "poppins";
@@ -66,21 +57,20 @@ export default {
   }
   &__video {
     grid-column: 1 / span 3;
-    grid-row: 1 / span 3;
+    grid-row: 2 / span 2;
     justify-self: center;
-    align-self: center;
     width: 70%;
   }
   &__bubbleMid {
     grid-column: 1 / 1;
-    grid-row: 2 / span 2;
+    grid-row: 3 / 3;
     justify-self: start;
-    align-self: end;
+    align-self: start;
   }
   &__bubbleTop {
     grid-column: 3 / 3;
     grid-row: 1 / 1;
-    justify-self: end;
+    justify-self: start;
   }
 }
 </style>
