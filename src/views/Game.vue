@@ -1,11 +1,13 @@
 <template>
-  <div @mousemove="mouseMove">
-    <SubmarineLight class="submarine" />
-    <Zone
-      v-for="zoneCounter in zones"
-      :key="zoneCounter"
-      :zoneData="zoneCounter"
-    />
+  <div class="game">
+    <div @mousemove="mouseMove">
+      <SubmarineLight class="submarine" />
+      <Zone
+        v-for="zoneCounter in zones"
+        :key="zoneCounter"
+        :zoneData="zoneCounter"
+      />
+    </div>
   </div>
 </template>
 
@@ -44,6 +46,11 @@ export default {
 };
 </script>
 <style scoped lang="scss">
+.game {
+  background-image: url(../assets/bg.svg);
+  background-repeat: no-repeat;
+  width: 100vw;
+}
 .submarine {
   position: fixed;
   width: 150px;
