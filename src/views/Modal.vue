@@ -40,16 +40,8 @@
         <img class="bg__arrow--down" src="../assets/arrowd.svg" />
         <img class="bg__arrow--up" src="../assets/arrowu.svg" />
         <span class="span" @click="showModal = false"
-          ><img v-bind:src="closeImg" class="closePop"/></span>
-           <div class="progress">
-           <img v-bind:src="progressImg" class="progress__item"/>
-           <div class="circle_container">
-           <div class="circle__one"></div>
-           <div class="circle__two"></div>
-           <div class="circle__three"></div>
-           <div class="circle__four"></div>
-           </div>
-           </div>
+          ><img v-bind:src="closeImg" class="closePop"
+        /></span>
       </div>
     </transition>
   </div>
@@ -57,8 +49,8 @@
 
 <script>
 import imageSrc from "../assets/dolphin.svg";
-import closeImg from '../assets/closepopup.svg'
-import progressImg from '../assets/progressbar.svg'
+import closeImg from "../assets/closepopup.svg";
+import progressImg from "../assets/progressbar.svg";
 
 export default {
   data() {
@@ -66,8 +58,8 @@ export default {
       subtitle: "YVETTE THE PINK SHRIMP",
       showModal: false,
       imageSrc: imageSrc,
-      closeImg : closeImg,
-     progressImg : progressImg,
+      closeImg: closeImg,
+      progressImg: progressImg,
       longevityText: "2 years ",
       reproductionText:
         "The females lay 50,000 to 1 million eggs, which hatch after some 24 hours.",
@@ -267,26 +259,5 @@ export default {
   .slide-leave-to {
     transform: translate(-50%, -50%) scale(0.01);
   }
-}
-.progress__item{
-    position: fixed;
-    bottom: -72%;
-      left: 50%;
-    transform: translate(-50%, -50%);
-}
-.circle_container{
-    width: 685px;
-    display: flex;
-    justify-content: space-between;
-    margin: auto;
-margin-top: 220px;
-    .circle__one, .circle__two, .circle__three, .circle__four{
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        background-color:#fefcd0 ;
-        bottom: 25px;
-z-index: 300;
-    }
 }
 </style>
