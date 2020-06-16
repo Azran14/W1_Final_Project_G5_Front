@@ -11,10 +11,12 @@ export default {
 </script>
 
 <style>
+
 .question0ne__title {
   color: #fefcd0;
-  font-weight: 900;
+  font-weight: 1000;
   font-size: 40px;
-  margin-bottom: 24px;
+  margin-bottom: 74px;
+  padding-top: 48px;
 }
 </style>
