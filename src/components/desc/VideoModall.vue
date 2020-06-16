@@ -1,5 +1,9 @@
 <template>
-  <video class="video" :srcset="getVideo()" alt="Video"></video>
+  <video
+    class="video"
+    :src="require(`../../assets/video/${text}.mp4`)"
+    alt="Video"
+  ></video>
 </template>
 
 <script>
@@ -7,13 +11,14 @@ export default {
   name: "VideoModall",
   data() {
     return {
-      video: "video.mp4",
+      text: "video",
     };
   },
   methods: {
+    /* 
     getVideo: function() {
       return "../../assets/video/" + this.video;
-    },
+    }, */
   },
 };
 </script>

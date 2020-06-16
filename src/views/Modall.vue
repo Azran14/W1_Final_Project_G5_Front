@@ -19,6 +19,12 @@
     <div class="modall__reproduction">
       <ReproductionModall :text="this.modalData.reproductionText" />
     </div>
+    <div class="modall__details">
+      <DetailsModall />
+    </div>
+    <div class="modall__showdetail">
+      <ShowdetailModall :msg="this.modalData.showdetail" />
+    </div>
     <div class="modall__sound">
       <SoundModall :msg="this.modalData.soundText" />
     </div>
@@ -62,6 +68,8 @@ import IdentityModall from "@/components/desc/IdentityModall.vue";
 import ArrowupModall from "@/components/desc/ArrowupModall.vue";
 import ArrowdownModall from "@/components/desc/ArrowdownModall.vue";
 import BubbletopModall from "@/components/desc/BubbletopModall.vue";
+import DetailsModall from "@/components/desc/DetailsModall.vue";
+import ShowdetailModall from "@/components/desc/ShowdetailModall.vue";
 
 export default {
   name: "Modall",
@@ -79,6 +87,8 @@ export default {
     ArrowupModall,
     ArrowdownModall,
     BubbletopModall,
+    DetailsModall,
+    ShowdetailModall,
   },
   data() {
     return {
@@ -97,6 +107,8 @@ export default {
         weightValue: " 10g",
         sizeValue: "Around 5 to 10cm",
         soundText: "on the mic if you want to hear me.",
+        showdetail:
+          "Some shrimps, known as cleaner shrimp, live of grooming bigger fish and eating their parasites and dead skin. Others are fierce predators, like the snapping shrimp, that snaps its claws to create a shock wave that stuns preys. ",
       },
     };
   },
@@ -160,10 +172,26 @@ export default {
     grid-row: 3 / span 2;
     justify-self: start;
     align-self: start;
+    z-index: 999;
   }
   &__reproduction {
     grid-column: 4 / 4;
     grid-row: 3 / 3;
+  }
+  &__details {
+    grid-column: 4 / 4;
+    grid-row: 2 / 2;
+
+    justify-self: start;
+    align-self: center;
+  }
+
+  &__showdetail {
+    grid-column: 4 / 4;
+    grid-row: 2 / 2;
+    justify-self: start;
+    align-self: end;
+    border: solid 2px green;
   }
   &__sound {
     grid-column: 4 / 4;
