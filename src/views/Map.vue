@@ -28,22 +28,13 @@ export default {
 
 <style scoped lang="scss">
 .modall {
-  position: fixed;
   display: inline-grid;
-  grid-template-columns: 150px 3fr 150px;
-  grid-template-rows: 150px 2fr 150px;
+  grid-template-columns: 100px 900px 100px;
+  grid-template-rows: 100px 400px 100px;
   grid-column-gap: 10px;
-  top: 50%;
-  left: 50%;
-  max-height: 80%;
-  transform: translate(-50%, -50%);
   white-space: nowrap;
-  width: 80%;
-  overflow: auto;
   max-width: 80vw;
   min-height: 80vh;
-  opacity: 80%;
-  border-radius: 10px;
   padding: 25px;
   color: #fefcd0;
   font-family: "poppins";
@@ -57,13 +48,15 @@ export default {
     grid-column: 3 / 3;
     grid-row: 1 / 1;
     justify-self: end;
+    align-self: end;
   }
   &__map {
     grid-column: 1 / span 3;
     grid-row: 1 / span 3;
     justify-self: center;
     align-self: center;
-    width: 90%;
+    width: 95%;
+    height: 100%;
   }
   /*&__seaweed {
     grid-column: 3 / 3;

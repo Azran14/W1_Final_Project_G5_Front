@@ -11,9 +11,15 @@
     </div>
     <div class="slider__container">
       <div ref="modals" class="slider__modals">
-        <div class="slide">RES</div>
-        <div class="slide">PON</div>
-        <div class="slide">SIV</div>
+        <div class="slide">
+          <Modall class="slide" />
+        </div>
+        <div class="slide">
+          <Video class="slide" />
+        </div>
+        <div class="slide">
+          <Map class="slide" />
+        </div>
       </div>
     </div>
     <div class="slider__next">
@@ -30,8 +36,17 @@
 </template>
 
 <script>
+import Video from "@/views/Video.vue";
+import Map from "@/views/Map.vue";
+import Modall from "@/views/Modall.vue";
+
 export default {
   name: "SliderModal",
+  components: {
+    Video,
+    Map,
+    Modall,
+  },
   data() {
     return {
       value: 0,
@@ -57,7 +72,6 @@ export default {
   align-items: center;
   top: 50%;
   left: 50%;
-  max-height: 80%;
   transform: translate(-50%, -50%);
   background-color: #4db2ce;
   width: 80%;
@@ -90,7 +104,6 @@ export default {
   overflow: hidden;
   width: 80%;
   height: 80%;
-  border: 2px black solid;
 }
 
 .slider__modals {
@@ -98,15 +111,6 @@ export default {
   overflow: hidden;
   width: 300%;
   height: 100%;
-  :nth-child(1) {
-    background-color: red;
-  }
-  :nth-child(2) {
-    background-color: green;
-  }
-  :nth-child(3) {
-    background-color: orange;
-  }
 }
 
 .slide {
