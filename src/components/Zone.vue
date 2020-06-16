@@ -1,7 +1,12 @@
 <template>
-  <section v-on:keyup.enter="idk()">
+  <section>
     <div class="container">
-      <div v-for="img_link in fishData" :key="img_link" class="animal"></div>
+      <div
+        @click="researchFish()"
+        v-for="img_link in fishData"
+        :key="img_link"
+        class="animal"
+      ></div>
     </div>
   </section>
 </template>
@@ -11,7 +16,6 @@ export default {
   name: "Zone",
   props: {
     zoneData: String,
-    test: Boolean,
   },
   data() {
     return {
@@ -24,17 +28,9 @@ export default {
       ],
     };
   },
-  watch: {
-    test: function() {
-      this.jesaispasmoi();
-    },
-  },
   methods: {
-    jesaispasmoi: function() {
-      alert("yo la mif");
-    },
-    idk: function() {
-      this.test = true;
+    researchFish: function() {
+      console.log("slt");
     },
   },
 };
@@ -51,6 +47,7 @@ export default {
   border: dotted 2px red;
   background-color: red;
   margin-bottom: 200px;
+  z-index: 98;
 }
 .container {
   width: 90%;
