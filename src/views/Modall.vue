@@ -19,11 +19,19 @@
     <div class="modall__reproduction">
       <ReproductionModall :text="this.modalData.reproductionText" />
     </div>
-    <div class="modall__details">
+    <div
+      class="modall__details"
+      v-bind:class="[isVisible ? 'yes' : 'yes']"
+      @click="showDetail()"
+    >
       <DetailsModall />
     </div>
-    <div class="modall__showdetail">
-      <ShowdetailModall :msg="this.modalData.showdetail" />
+    <div
+      class="modall__showdetail"
+      v-bind:class="[isVisible ? 'no' : 'yes']"
+      @click="isVisible = yes"
+    >
+      <ShowdetailModall />
     </div>
     <div class="modall__sound">
       <SoundModall :msg="this.modalData.soundText" />
@@ -92,9 +100,11 @@ export default {
   },
   data() {
     return {
+      isVisible: true,
+
       modalData: {
         subtitle: "YVETTE THE PINK SHRIMP",
-        showModal: false,
+
         text: "dolphin.svg",
         longevityText: "2 years ",
 
@@ -111,6 +121,11 @@ export default {
           "Some shrimps, known as cleaner shrimp, live of grooming bigger fish and eating their parasites and dead skin. Others are fierce predators, like the snapping shrimp, that snaps its claws to create a shock wave that stuns preys. ",
       },
     };
+  },
+  methods: {
+    showDetail: function() {
+      this.isVisible = !this.isVisible;
+    },
   },
 };
 </script>
@@ -130,11 +145,9 @@ export default {
   overflow: auto;
   max-width: 80vw;
   min-height: 80vh;
-  background-color: #4db2ce;
   opacity: 80%;
   border-radius: 10px;
   padding: 25px;
-  border: 4px solid #fefcd0;
   color: #fefcd0;
   font-family: "poppins";
 
@@ -185,13 +198,21 @@ export default {
     justify-self: start;
     align-self: center;
   }
+  .yes {
+    display: inline-grid;
+  }
+  .no {
+    display: none;
+  }
 
   &__showdetail {
     grid-column: 4 / 4;
-    grid-row: 2 / 2;
+    grid-row: 3 / 3;
     justify-self: start;
-    align-self: end;
-    border: solid 2px green;
+    align-self: start;
+    width: 32vw;
+    height: 15vh;
+    z-index: 99;
   }
   &__sound {
     grid-column: 4 / 4;

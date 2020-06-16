@@ -49,11 +49,9 @@ export default {
   overflow: auto;
   max-width: 80vw;
   min-height: 80vh;
-  background-color: #4db2ce;
   opacity: 80%;
   border-radius: 10px;
   padding: 25px;
-  border: 4px solid #fefcd0;
   color: #fefcd0;
   font-family: "poppins";
 
