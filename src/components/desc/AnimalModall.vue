@@ -1,6 +1,6 @@
 <template>
   <div class="test">
-    <img :src="getAnimal()" />
+    <img :src="require(`../../assets/${text}.svg`)" />
   </div>
 </template>
 
@@ -12,12 +12,7 @@ export default {
       text: "dolphin",
     };
   },
-  methods: {
-    getAnimal: function() {
-      const fileName = this.text;
-      return `../../assets/${fileName}.svg`;
-    },
-  },
+  methods: {},
 };
 </script>
 <style scoped lang="scss"></style>

@@ -12,7 +12,7 @@ new Vue({
   render: (h) => h(App),
 }).$mount("#app");
 
-// Variables
+/* // Variables
 const $ship = document.querySelector(".ship"); // get the ship
 let shipX = $ship.offsetLeft; // X position of ship
 let shipY = $ship.offsetTop; // Y position of ship
@@ -67,7 +67,7 @@ function onKeyDown(event) {
   }
 }
 
-window.addEventListener("keydown", onKeyDown);
+window.addEventListener("keydown", onKeyDown); */
 
 // !!!!!!   POP-UP AU CLICK POUR LE MOMENT     !!!!!
 
