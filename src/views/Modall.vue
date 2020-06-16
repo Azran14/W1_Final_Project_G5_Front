@@ -239,7 +239,8 @@ export default {
   &__identity {
     grid-column: 2 / span 2;
     grid-row: 2 / span 2;
-    justify-self: end;
+    justify-self: center;
+    align-self: center;
   }
   &__arrowup {
     grid-column: 2 / 2;

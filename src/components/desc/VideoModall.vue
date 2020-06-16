@@ -1,9 +1,13 @@
 <template>
-  <video
-    class="video"
-    :src="require(`../../assets/video/${text}.mp4`)"
-    alt="Video"
-  ></video>
+  <iframe
+    width="560"
+    height="415"
+    :src="`https://youtube.com/embed/${text}`"
+    frameborder="0"
+    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen
+  >
+  </iframe>
 </template>
 
 <script>
@@ -11,7 +15,7 @@ export default {
   name: "VideoModall",
   data() {
     return {
-      text: "video",
+      text: "TuS_UqOsr0k",
     };
   },
   methods: {
