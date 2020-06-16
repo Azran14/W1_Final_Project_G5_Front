@@ -1,10 +1,10 @@
 <template>
   <div class="identity">
     <p>
-      Hi, my name is Yvette. <br />
-      I am from the pandalidae <br />
+      Hi, my name is {{ this.infos[0].name }}. <br />
+      I am from the {{ this.infos[1].family }} <br />
       family and I am a <br />
-      crustacean
+      {{ this.infos[2].species }}
     </p>
   </div>
 </template>
@@ -12,6 +12,15 @@
 <script>
 export default {
   name: "IdentityModall",
+  data() {
+    return {
+      infos: [
+        { name: "Yvette" },
+        { family: "pandalidae" },
+        { species: "crustacean" },
+      ],
+    };
+  },
 };
 </script>
 <style scoped lang="scss">
