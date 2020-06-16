@@ -4,6 +4,7 @@
       v-for="zoneCounter in zones"
       :key="zoneCounter"
       :zoneData="zoneCounter"
+      test="false"
     />
   </div>
 </template>
@@ -18,7 +19,7 @@ export default {
   },
   data() {
     return {
-      zones: ["000", "111", "222", "333"],
+      zones: ["0", "1", "2", "3"],
     };
   },
 };

@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section v-on:keyup.enter="idk()">
     <div class="container">
       <div v-for="img_link in fishData" :key="img_link" class="animal"></div>
     </div>
@@ -11,6 +11,7 @@ export default {
   name: "Zone",
   props: {
     zoneData: String,
+    test: Boolean,
   },
   data() {
     return {
@@ -23,10 +24,22 @@ export default {
       ],
     };
   },
+  watch: {
+    test: function() {
+      this.jesaispasmoi();
+    },
+  },
+  methods: {
+    jesaispasmoi: function() {
+      alert("yo la mif");
+    },
+    idk: function() {
+      this.test = true;
+    },
+  },
 };
 </script>
 <style scoped lang="scss">
-//  $marginArray [""]
 @for $i from 1 through 5 {
   .animal:nth-child(#{$i}) {
     margin-left: random(18) * $i + vw;
