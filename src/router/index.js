@@ -24,8 +24,6 @@ Vue.use(VueRouter);
 const routes = [
   {
     path: "/",
-    redirect: "/contact",
-    redirect: "/Team",
     name: "Home",
     component: Home,
   },
@@ -110,15 +108,7 @@ const routes = [
 const router = new VueRouter({
   mode: "history",
   base: process.env.BASE_URL,
-  routes: [
-    {
-      path: "/",
-      redirect: (to) => {
-        name: "Home";
-        name: "Team";
-      },
-    },
-  ],
+  routes,
 });
 
 export default router;
