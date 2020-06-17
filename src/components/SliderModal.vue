@@ -117,4 +117,36 @@ export default {
   width: 100%;
   height: 100%;
 }
+
+@media (max-width: 768px) {
+  .slider__prev,
+  .slider__next {
+    display: none;
+  }
+  .slider__seaweed {
+    position: fixed;
+    width: 60px;
+    bottom: 0;
+    right: 10px;
+  }
+  .slider__modals {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 120%;
+    overflow-y: auto;
+    :nth-child(1) {
+      width: 100%;
+      height: 100%;
+    }
+    :nth-child(2) {
+      width: 100%;
+      height: 100%;
+    }
+    :nth-child(3) {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
 </style>
