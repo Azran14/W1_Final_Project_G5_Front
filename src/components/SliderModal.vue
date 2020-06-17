@@ -15,10 +15,10 @@
           <Modall class="slide" :fishData="fishData" />
         </div>
         <div class="slide">
-          <Video class="slide" />
+          <Video class="slide" :fishData="fishData" />
         </div>
         <div class="slide">
-          <Map class="slide" />
+          <Map class="slide" :link="fishData.link" />
         </div>
       </div>
     </div>
@@ -53,7 +53,7 @@ export default {
     Modall,
   },
   props: {
-    fishData: Array,
+    fishData: Object,
   },
   data() {
     return {

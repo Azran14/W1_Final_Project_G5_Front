@@ -62,7 +62,6 @@ export default {
 .animal {
   height: 200px;
   width: 200px;
-  border: dotted 2px red;
   margin-bottom: 300px;
   z-index: 98;
 }
@@ -73,7 +72,6 @@ export default {
   min-height: 200px;
 }
 section {
-  border: solid 2px green;
   align-items: center;
   display: flex;
   flex-direction: column;

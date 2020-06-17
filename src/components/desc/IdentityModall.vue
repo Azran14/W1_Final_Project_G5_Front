@@ -13,7 +13,7 @@
 export default {
   name: "IdentityModall",
   props: {
-    fishData: Array,
+    fishData: Object,
   },
 };
 </script>

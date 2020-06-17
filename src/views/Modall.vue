@@ -96,7 +96,7 @@ export default {
     ShowdetailModall,
   },
   props: {
-    fishData: Array,
+    fishData: Object,
   },
   data() {
     return {

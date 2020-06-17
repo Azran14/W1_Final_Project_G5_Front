@@ -1,6 +1,6 @@
 <template>
   <div class="modall">
-    <MapModall class="modall__map" />
+    <MapModall class="modall__map" :link="link" />
     <BubblemidModall class="modall__bubbleMid" />
     <BubbletopModall class="modall__bubbleTop" />
   </div>
@@ -12,7 +12,7 @@ import BubbletopModall from "@/components/desc/BubbletopModall.vue";
 import MapModall from "@/components/map/MapModall.vue";
 
 export default {
-  name: "map",
+  name: "Map",
   components: {
     BubblemidModall,
     BubbletopModall,
@@ -22,6 +22,9 @@ export default {
     return {
       modalMap: {},
     };
+  },
+  props: {
+    link: String,
   },
 };
 </script>
