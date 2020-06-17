@@ -1,13 +1,10 @@
 <template>
-  <h4>Click {{ msg }}</h4>
+  <h4>Click on the mic if you want to hear me.</h4>
 </template>
 
 <script>
 export default {
   name: "SoundModall",
-  props: {
-    msg: String,
-  },
 };
 </script>
 <style scoped lang="scss"></style>

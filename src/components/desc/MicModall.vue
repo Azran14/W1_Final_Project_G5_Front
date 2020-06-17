@@ -4,14 +4,14 @@
 <script>
 export default {
   name: "MicModall",
-  data() {
-    return {
-      sound: "dolphin",
-    };
+  props: {
+    link: String,
   },
   methods: {
     playSound() {
-      var audio = new Audio(require(`../../assets/sound/${this.sound}.mp3`));
+      var audio = new Audio(
+        require(`../../assets/sound/sound${this.link}.mp3`)
+      );
       audio.play();
     },
   },

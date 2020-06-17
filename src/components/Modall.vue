@@ -31,13 +31,13 @@
       <ShowdetailModall :msg="fishData.details" />
     </div>
     <div class="modall__sound">
-      <SoundModall :msg="this.modalData.soundText" />
+      <SoundModall />
     </div>
     <div class="modall__size">
       <SizeModall :msg="fishData.size" />
     </div>
     <div class="modall__mic">
-      <MicModall />
+      <MicModall :link="fishData.link" />
     </div>
     <div class="modall__bubble">
       <BubbleModall />
@@ -101,25 +101,6 @@ export default {
   data() {
     return {
       isVisible: true,
-
-      modalData: {
-        subtitle: "YVETTE THE PINK SHRIMP",
-
-        text: "dolphin.svg",
-        longevityText: "2 years ",
-
-        reproductionText:
-          "The females lay 50,000 to 1 million eggs, which hatch after some 24 hours.",
-
-        message:
-          "Hi, my name is Yvette . I am from the pandalidae family and I am a crustacean.",
-
-        weightValue: " 10g",
-        sizeValue: "Around 5 to 10cm",
-        soundText: "on the mic if you want to hear me.",
-        showdetail:
-          "Some shrimps, known as cleaner shrimp, live of grooming bigger fish and eating their parasites and dead skin. Others are fierce predators, like the snapping shrimp, that snaps its claws to create a shock wave that stuns preys. ",
-      },
     };
   },
   methods: {

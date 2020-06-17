@@ -1,5 +1,9 @@
 <template>
   <section>
+    <div class="zone">
+      <h2 class="zone__title">{{ title }}</h2>
+    </div>
+
     <div class="container">
       <img
         @click="(showModal = true), $emit('modalOn'), (fishIndex = index)"
@@ -27,6 +31,7 @@ export default {
   },
   props: {
     zoneData: Number,
+    title: String,
   },
   data() {
     return {
@@ -54,6 +59,21 @@ export default {
 };
 </script>
 <style scoped lang="scss">
+.zone {
+  width: 100%;
+  height: 100px;
+  background-color: rgba(0, 0, 139, 0.219);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__title {
+    font-size: 45px;
+    text-transform: uppercase;
+    font-family: "poppins-bold";
+    color: #fefcd0;
+  }
+}
+
 @for $i from 1 through 5 {
   .animal:nth-child(#{$i}) {
     margin-left: random(18) * $i + vw;
