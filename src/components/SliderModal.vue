@@ -12,13 +12,13 @@
     <div class="slider__container">
       <div ref="modals" class="slider__modals">
         <div class="slide">
-          <Modall class="slide" />
+          <Modall class="slide" :fishData="fishData" />
         </div>
         <div class="slide">
-          <Video class="slide" />
+          <Video class="slide" :fishData="fishData" />
         </div>
         <div class="slide">
-          <Map class="slide" />
+          <Map class="slide" :link="fishData.link" />
         </div>
       </div>
     </div>
@@ -51,6 +51,9 @@ export default {
     Video,
     Map,
     Modall,
+  },
+  props: {
+    fishData: Object,
   },
   data() {
     return {

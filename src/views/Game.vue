@@ -32,7 +32,7 @@ export default {
   },
   data() {
     return {
-      zones: [-1, 0, 1, 2, 3],
+      zones: [0, 1, 2, 3],
       subMpos: { x: 0, y: 0 },
       mouse: { x: 0, y: 0 },
       subMove: true,

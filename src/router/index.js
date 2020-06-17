@@ -2,7 +2,7 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
 import Team from "../views/Team.vue";
-import Contact from "../views/Contact.vue";
+// import Contact from "../views/Contact.vue";
 import Modal from "../views/Modal.vue";
 import Htp from "../views/Htp.vue";
 import Move from "../views/Move.vue";
@@ -32,11 +32,11 @@ const routes = [
     name: "Team",
     component: Team,
   },
-  {
-    path: "/contact",
-    name: "Contact",
-    component: Contact,
-  },
+  // {
+  //   path: "/contact",
+  //   name: "Contact",
+  //   component: Contact,
+  // },
   {
     path: "/modal",
     name: "Modal",

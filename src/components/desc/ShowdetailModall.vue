@@ -5,11 +5,7 @@
     </div>
     <div class="showdetail__text">
       <h4>
-        Some shrimps, known as cleaner shrimp, live of grooming <br />
-        bigger fish and eating their parasites and dead skin.
-        <br />
-        Others are fierce predators, like the snapping shrimp, that <br />
-        snaps its claws to create a shock wave that stuns preys.
+        {{ msg }}
       </h4>
     </div>
   </div>
@@ -18,10 +14,9 @@
 <script>
 export default {
   name: "ShowdetailModall",
-  /* 
   props: {
     msg: String,
-  }, */
+  },
 };
 </script>
 
