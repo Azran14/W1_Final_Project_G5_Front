@@ -1,16 +1,18 @@
 <template>
   <section>
-    <div class="container" @mouseenter="loadFish(zoneData)">
-      <div
-        @click="(showModal = true), $emit('modalOn')"
-        v-for="img_link in fishData"
-        :key="img_link"
+    <div class="container">
+      <img
+        @click="(showModal = true), $emit('modalOn'), (fishIndex = index)"
+        v-for="(info, index) in fishData"
+        :key="index"
         class="animal"
-      ></div>
+        :src="require(`../assets/img/img${fishData[index].link}.svg`)"
+      />
       <SliderModal
         v-if="showModal"
         @close="(showModal = false), $emit('closeModal')"
         class="modal"
+        :fishData="fishData[fishIndex]"
       />
     </div>
   </section>
@@ -28,30 +30,27 @@ export default {
   },
   data() {
     return {
-      fishData: [
-        // { id_animals: "1", img_link: "yvette", zone: "0" },
-        // { id_animals: "7", img_link: "surfy", zone: "0" },
-        // { id_animals: "9", img_link: "rorry", zone: "0" },
-        // { id_animals: "14", img_link: "max", zone: "0" },
-        // { id_animals: "15", img_link: "cookie", zone: "0" },
-      ],
-      showModal: false,
-    };
-  },
-  methods: {
-    // researchFish: function() {
-    //   console.log("slt");
-    // },
-    loadFish: function(zoneData) {
-      zoneData++;
-      fetch(
-        "https://ocean-api.vdpn.io/API/index.php?filter=zone&value=" + zoneData
+      fishData: fetch(
+        "https://ocean-api.vdpn.io/API/index.php?filter=zone&value=" +
+          this.zoneData
       )
         .then((response) => response.json())
-        .then((data) => (fishData = data));
-      // .catch((error) => alert("Erreur : " + error));
-    },
+        .then((data) => {
+          this.fishData = data;
+          this.request = true;
+        }),
+      // .catch((error) => alert("Erreur : " + error));,
+      showModal: false,
+      request: false,
+      fishIndex: Number,
+    };
   },
+  // watch: {
+  //   request: function() {
+  //     if (this.request) this.loadFish(this.zoneData);
+  //   },
+  // },
+  methods: {},
 };
 </script>
 <style scoped lang="scss">
@@ -61,10 +60,8 @@ export default {
   }
 }
 .animal {
-  height: 30px;
-  width: 30px;
-  border: dotted 2px red;
-  background-color: red;
+  height: 200px;
+  width: 200px;
   margin-bottom: 300px;
   z-index: 98;
 }
@@ -75,7 +72,6 @@ export default {
   min-height: 200px;
 }
 section {
-  border: solid 2px green;
   align-items: center;
   display: flex;
   flex-direction: column;
