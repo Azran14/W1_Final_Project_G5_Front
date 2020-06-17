@@ -12,7 +12,7 @@ export default {
   },
   methods: {
     muteAudio() {
-      var audio = new Audio(require(`../assets/sound/sea.mp3`));
+      var audio = new Audio(require(`../assets/sound/sound_all.mp3`));
       audio.muted = true;
     },
   },
