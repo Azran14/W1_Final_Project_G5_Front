@@ -68,13 +68,13 @@ export default {
   font-size: 24px;
   font-weight: 700;
   color: #fefcd0;
-  margin-left: 16%;
+  margin-left: 10%;
   width: 670px;
   text-align: left;
   margin-bottom: 24px;
 }
 .answer__container {
-  margin-left: 16%;
+  margin-left: 10%;
   width: 670px;
   margin-bottom: 64px;
   .answer__item {

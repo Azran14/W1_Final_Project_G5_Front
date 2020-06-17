@@ -1,21 +1,9 @@
 <template>
   <div class="answer">
-    <div class="answer__contain">
+    <div class="answer__contain" >
       <AnswerImage />
-      <p class="answer__text">{{ asr1 }}</p>
     </div>
-    <div class="answer__contain">
-      <AnswerImage />
-      <p class="answer__text">{{ asr2 }}</p>
-    </div>
-    <div class="answer__contain">
-      <AnswerImage />
-      <p class="answer__text">{{ asr3 }}</p>
-    </div>
-    <div class="answer__contain">
-      <AnswerImage />
-      <p class="answer__text">{{ asr4 }}</p>
-    </div>
+    <slot></slot>
   </div>
 </template>
 
@@ -25,10 +13,18 @@ import AnswerImage from "@/components/cmq/AnswerImage.vue";
 export default {
   name: "answer",
   props: {
-    asr1: String,
-    asr2: String,
-    asr3: String,
-    asr4: String,
+    answers: {},
+  },
+  methods: {
+    // testAnswer: function() {
+    //   const answer = Object.values(this.answers);
+    //   for (let i = 0; i < answer.length; i++) {
+    //     if (answer[i].correct) {
+    //       answer[i].classList.add('red');
+    //     }
+    //     console.log( answer[i].text);
+    //   }
+    // },
   },
   components: {
     AnswerImage,

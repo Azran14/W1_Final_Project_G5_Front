@@ -1,5 +1,6 @@
 <template>
   <div class="questionOne">
+    <modal-vide>
     <QuestionTitle />
     <Question
       class="question__container"
@@ -40,6 +41,7 @@
         asr4="All"
       />
     </div>
+      </modal-vide>
   </div>
 </template>
 
@@ -47,12 +49,14 @@
 import Question from "@/components/cmq/Question.vue";
 import Answer from "@/components/cmq/Answer.vue";
 import QuestionTitle from "@/components/cmq/QuestionTitle.vue"
+import ModalVide from "@/components/ModalVide.vue";
 export default {
   name: "Qcm3",
   components: {
     Question,
     Answer,
     QuestionTitle,
+     ModalVide ,
   },
 };
 </script>
@@ -62,16 +66,15 @@ export default {
   font-size: 24px;
   font-weight: 700;
   color: #fefcd0;
-  display: block;
-  margin: auto;
-  width: 600px;
+  margin-left: 10%;
+  width: 670px;
   text-align: left;
-  margin-bottom: 8px;
+  margin-bottom: 24px;
 }
 .answer__container {
-  margin: auto;
-  width: 600px;
-  margin-bottom: 40px;
+  margin-left: 10%;
+  width: 670px;
+  margin-bottom: 64px;
   .answer__item {
     font-size: 18px;
     color: #ffffff;
