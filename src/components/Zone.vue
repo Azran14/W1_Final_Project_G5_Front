@@ -3,10 +3,10 @@
     <div class="container">
       <img
         @click="(showModal = true), $emit('modalOn')"
-        v-for="(img_link, index) in fishData"
+        v-for="(info, index) in fishData"
         :key="index"
         class="animal"
-        :src="`/assets/img${fishData[index].link}.svg`"
+        :src="require(`../assets/img/img${fishData[index].link}.svg`)"
       />
       <SliderModal
         v-if="showModal"
@@ -48,11 +48,7 @@ export default {
   //     if (this.request) this.loadFish(this.zoneData);
   //   },
   // },
-  methods: {
-    // loadFish: function(zoneData) {
-    //   zoneData++;
-    // },
-  },
+  methods: {},
 };
 </script>
 <style scoped lang="scss">
@@ -62,10 +58,9 @@ export default {
   }
 }
 .animal {
-  height: 30px;
-  width: 30px;
+  height: 200px;
+  width: 200px;
   border: dotted 2px red;
-  background-color: red;
   margin-bottom: 300px;
   z-index: 98;
 }
