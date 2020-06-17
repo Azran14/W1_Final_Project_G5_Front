@@ -9,21 +9,11 @@
 - RATSIMISETRA Nastia
 - BENSIMHON Yoan
 
-## Stack du projet
+## URL du projet
 
-- Babel (es6 syntax)
-- Vue.js
-  - Vue Router
-- Sass
+- https://finalprojectg5.netlify.app/
 
-## Route
-
-| url   | nom      |
-| ----- | -------- |
-| /     | Homepage |
-| /team | Team     |
-
-## Command line pour démarrer le projet
+### Hope you enjoy our site !
 
 ### Project setup
 
@@ -36,25 +26,3 @@ yarn install
 ```
 yarn serve
 ```
-
-### Compiles and minifies for production
-
-```
-yarn build
-```
-
-### Lints and fixes files
-
-```
-yarn lint
-```
-
-## Documentation
-
-https://vuejs.org/
-
-https://router.vuejs.org/
-
-https://www.vuemastery.com/pdf/Vue-Essentials-Cheat-Sheet.pdf
-
-https://marozed.ma/vue-cheatsheet/
