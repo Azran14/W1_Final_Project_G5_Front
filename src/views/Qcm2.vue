@@ -6,12 +6,13 @@
         class="question__container"
         qst="What is the lifespan of a plastic bag in the ocean ?"
       />
-      <div class="answer__container" >
-        <Answer 
+      <div class="answer__container">
+        <Answer
           :answers="answers1"
           v-for="answer in answers1"
           :key="answer.id"
-          v-bind:class="answer.correct ?'green' :'red'" class="s" 
+          v-bind:class="answer.correct ? 'green' : 'red'"
+          class="s"
         >
           <p>{{ answer.text }}</p>
         </Answer>
@@ -24,9 +25,10 @@
         <Answer
           answers="answers"
           v-for="answer in answers2"
-         
           :key="answer.id"
-          v-bind:class="answer.correct ?'green' :'red'" class="s"  >
+          v-bind:class="answer.correct ? 'green' : 'red'"
+          class="s"
+        >
           <p>{{ answer.text }}</p>
         </Answer>
       </div>
@@ -39,7 +41,9 @@
           answers="answers"
           v-for="answer in answers3"
           :key="answer.id"
-          v-bind:class="answer.correct ?'green' :'red'" class="s" >
+          v-bind:class="answer.correct ? 'green' : 'red'"
+          class="s"
+        >
           <p>{{ answer.text }}</p>
         </Answer>
       </div>
@@ -132,8 +136,6 @@ export default {
       ],
     };
   },
-
-
 };
 </script>
 
@@ -159,13 +161,14 @@ export default {
     color: #ffffff;
     font-weight: 400;
     align-items: center;
-    
   }
-  .green{
-    color: green;
+  .green {
+    background-color: #3CFD38;
+    color: white;
   }
-  .red{
-  color: red;
+  .red {
+    // background-color: red;
+    color: white;
   }
 }
 </style>

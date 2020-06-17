@@ -1,6 +1,6 @@
 <template>
   <div class="answer">
-    <div class="answer__contain" >
+    <div class="answer__contain">
       <AnswerImage />
     </div>
     <slot></slot>
