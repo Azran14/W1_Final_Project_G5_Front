@@ -65,4 +65,42 @@ export default {
     align-self: end;
   }*/
 }
+
+@media screen and (min-width: 426px) and (max-width: 768px) {
+  .modall {
+    grid-template-columns: 500px;
+    grid-template-rows: 500px;
+    &__map {
+      grid-column: 1 / 1;
+      grid-row: 1 / 1;
+      justify-self: center;
+      align-self: center;
+      width: 95%;
+      height: 100%;
+    }
+    &__bubbleTop {
+      display: none;
+    }
+    &__bubbleMid {
+      display: none;
+    }
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 425px) {
+  .modall {
+    grid-template-columns: 280px;
+    grid-template-rows: 400px;
+    &__map {
+      grid-column: 1;
+      grid-row: 1;
+    }
+    &__bubbleTop {
+      display: none;
+    }
+    &__bubbleMid {
+      display: none;
+    }
+  }
+}
 </style>

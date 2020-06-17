@@ -133,12 +133,10 @@ export default {
 .modall {
   display: inline-grid;
   grid-template-columns: 100px 200px 250px 300px 100px;
-  grid-template-rows: repeat(4, 15%) 15%;
+  grid-template-rows: repeat(4, 15%) 25%;
   grid-column-gap: 10px;
   white-space: nowrap;
-  width: 80%;
   max-width: 80vw;
-  min-height: 80vh;
   padding: 25px;
   color: #fefcd0;
   font-family: "poppins";
@@ -260,101 +258,151 @@ export default {
   }
 }
 
-@media (max-width: 768px) {
+@media screen and (min-width: 426px) and (max-width: 768px) {
   .modall {
     grid-template-columns: 500px;
-    grid-template-rows: repeat(10, 50px);
+    grid-template-rows: 80px 50px 200px repeat(5, 50px);
 
     &__title {
-      font-size: 20px;
+      font-size: 30px;
       grid-column: 1 / 1;
       grid-row: 1 / 1;
       justify-self: center;
     }
     &__weight {
-      font-size: 10px;
+      font-size: 15px;
       grid-column: 1 / 1;
       grid-row: 2 / 2;
-      justify-self: start;
-      align-self: end;
     }
     &__size {
-      font-size: 10px;
+      font-size: 15px;
       grid-column: 1 / 1;
-      grid-row: 6 / 6;
-      justify-self: start;
-      align-self: center;
+      grid-row: 4 / 4;
+      justify-self: center;
     }
     &__bubble {
       width: 200px;
       height: 200px;
       grid-column: 1 / 1;
-      grid-row: 5 / 5;
-      justify-self: start;
-      align-self: center;
-    }
-    &__identity {
-      width: 100px;
-      height: 100px;
-      grid-column: 1 / 1;
-      grid-row: 4 / 4;
-      justify-self: end;
-      align-self: center;
-    }
-    &__arrowup {
-      grid-column: 1 / 1;
-      grid-row: 5 / 5;
+      grid-row: 3 / 3;
       justify-self: center;
       align-self: center;
     }
+    &__identity {
+      display: none;
+    }
+    &__arrowup {
+      display: none;
+    }
     &__arrowdown {
-      grid-column: 1 / 1;
-      grid-row: 3 / 3;
-      justify-self: start;
-      align-self: start;
+      display: none;
     }
     &__animal {
       width: 200px;
       height: 200px;
       grid-column: 1 / 1;
-      grid-row: 5 / 5;
-      justify-self: start;
+      grid-row: 3 / 3;
+      justify-self: center;
       align-self: center;
     }
     &__longevity {
-      font-size: 10px;
+      font-size: 15px;
       grid-column: 1 / 1;
-      grid-row: 8 / 8;
+      grid-row: 6 / 6;
       justify-self: start;
       align-self: start;
     }
     &__reproduction {
-      font-size: 10px;
+      font-size: 12px;
       grid-column: 1 / 1;
-      grid-row: 9 / 9;
-      justify-self: start;
+      grid-row: 7 / 7;
+      justify-self: center;
       align-self: start;
     }
     &__details {
-      font-size: 10px;
+      font-size: 15px;
       grid-column: 1 / 1;
-      grid-row: 7 / 7;
+      grid-row: 5 / 5;
       justify-self: start;
       align-self: start;
     }
     &__showdetail {
       font-size: 10px;
       grid-column: 1 / 1;
-      grid-row: 7 / 7;
+      grid-row: 5 / 5;
       justify-self: start;
       align-self: start;
     }
   }
 }
 
-@media screen and (max-width: 435px) {
+@media screen and (min-width: 320px) and (max-width: 425px) {
   .modall {
-    grid-template-columns: 400px;
+    grid-template-columns: 280px;
+    grid-template-rows: repeat(2, 50px) 200px repeat(5, 50px);
+    &__title {
+      font-size: 17px;
+      grid-column: 1 / 1;
+      grid-row: 1 / 1;
+      justify-self: start;
+      align-self: start;
+    }
+    &__weight {
+      font-size: 10px;
+      grid-column: 1 / 1;
+      grid-row: 2 / 2;
+    }
+    &__size {
+      font-size: 10px;
+      grid-column: 1 / 1;
+      grid-row: 4 / 4;
+      justify-self: center;
+    }
+    &__bubble {
+      width: 200px;
+      height: 200px;
+      grid-column: 1 / 1;
+      grid-row: 3 / 3;
+      justify-self: center;
+      align-self: center;
+    }
+    &__identity {
+      display: none;
+    }
+    &__arrowup {
+      display: none;
+    }
+    &__arrowdown {
+      display: none;
+    }
+    &__animal {
+      width: 200px;
+      height: 200px;
+      grid-column: 1 / 1;
+      grid-row: 3 / 3;
+      justify-self: center;
+      align-self: center;
+    }
+    &__longevity {
+      font-size: 10px;
+      grid-column: 1 / 1;
+      grid-row: 6 / 6;
+    }
+    &__reproduction {
+      font-size: 10px;
+      grid-column: 1 / 1;
+      grid-row: 7 / 7;
+    }
+    &__details {
+      font-size: 10px;
+      grid-column: 1 / 1;
+      grid-row: 5 / 5;
+    }
+    &__showdetail {
+      font-size: 10px;
+      grid-column: 1 / 1;
+      grid-row: 5 / 5;
+    }
   }
 }
 </style>
