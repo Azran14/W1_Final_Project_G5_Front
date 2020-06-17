@@ -114,7 +114,7 @@ export default {
 .modall {
   display: inline-grid;
   grid-template-columns: 100px 200px 250px 300px 100px;
-  grid-template-rows: repeat(4, 15%) 25%;
+  grid-template-rows: repeat(3, 15%) 30% 20%;
   grid-column-gap: 10px;
   white-space: nowrap;
   max-width: 80vw;
@@ -137,9 +137,9 @@ export default {
     font-size: 18px;
     line-height: 27px;
 
-    grid-column: 1 / 1;
+    grid-column: 1 / span 2;
     grid-row: 1 / 1;
-    justify-self: end;
+    justify-self: center;
     align-self: end;
   }
   &__longevity {
@@ -153,7 +153,7 @@ export default {
   }
   &__animal {
     grid-column: 2 / 2;
-    grid-row: 3 / span 2;
+    grid-row: 4 / span 2;
     justify-self: start;
     align-self: start;
     z-index: 999;
