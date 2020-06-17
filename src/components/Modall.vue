@@ -1,23 +1,20 @@
 <template>
   <div class="modall">
     <div class="modall__title">
-      <TitleModall :msg="this.modalData.subtitle" />
+      <TitleModall :msg="fishData.name" />
     </div>
     <div class="modall__weight">
-      <WeightModall class="modall__weight" :msg="this.modalData.weightValue" />
+      <WeightModall class="modall__weight" :msg="fishData.weight" />
     </div>
 
     <div class="modall__longevity">
-      <LongevityModall
-        class="modall__longevity"
-        :msg="this.modalData.longevityText"
-      />
+      <LongevityModall class="modall__longevity" :msg="fishData.longevity" />
     </div>
     <div class="modall__animal">
-      <AnimalModall class="modall__animal" />
+      <AnimalModall class="modall__animal" :text="fishData.link" />
     </div>
     <div class="modall__reproduction">
-      <ReproductionModall :text="this.modalData.reproductionText" />
+      <ReproductionModall :text="fishData.reproduction" />
     </div>
     <div
       class="modall__details"
@@ -31,13 +28,13 @@
       v-bind:class="[isVisible ? 'no' : 'yes']"
       @click="isVisible = yes"
     >
-      <ShowdetailModall />
+      <ShowdetailModall :msg="fishData.details" />
     </div>
     <div class="modall__sound">
       <SoundModall :msg="this.modalData.soundText" />
     </div>
     <div class="modall__size">
-      <SizeModall :msg="this.modalData.sizeValue" />
+      <SizeModall :msg="fishData.size" />
     </div>
     <div class="modall__mic">
       <MicModall />
@@ -47,7 +44,7 @@
     </div>
 
     <div class="modall__identity">
-      <IdentityModall />
+      <IdentityModall :fishData="fishData" />
     </div>
 
     <div class="modall__arrowup">
@@ -97,6 +94,9 @@ export default {
     BubbletopModall,
     DetailsModall,
     ShowdetailModall,
+  },
+  props: {
+    fishData: Object,
   },
   data() {
     return {

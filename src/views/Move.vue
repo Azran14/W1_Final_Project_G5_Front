@@ -3,16 +3,14 @@
     <div class="Move__container container">
       <Title class="container__title" msg="MOVE THE SUBMARINE" />
       <div class="container__infos">
-        <Keyboard class="container__keyboard" />
         <router-link to="find">
           <Submarine class="container__submarine" />
         </router-link>
-
-        <Wasd class="container__wasd" />
+        <Mouse />
       </div>
       <Subinfos
         class="container__subinfos"
-        text="Move the submarine using the arrow keys or WASD"
+        text="The submarine follows your mouse, so go explore the seabed"
       />
     </div>
     <Options />
@@ -23,8 +21,7 @@ import Title from "@/components/Title.vue";
 import Submarine from "@/components/Submarine.vue";
 import Subinfos from "@/components/Subinfos.vue";
 import Options from "@/components/Options.vue";
-import Wasd from "@/components/Wasd.vue";
-import Keyboard from "@/components/Keyboard.vue";
+import Mouse from "@/components/Mouse.vue";
 
 export default {
   name: "Move",
@@ -33,8 +30,7 @@ export default {
     Submarine,
     Subinfos,
     Options,
-    Wasd,
-    Keyboard,
+    Mouse,
   },
 };
 </script>
@@ -51,13 +47,13 @@ export default {
   height: 60%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   font-family: "poppins";
   color: #fefcd0;
   &__infos {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     width: 100%;
   }
   &__title {

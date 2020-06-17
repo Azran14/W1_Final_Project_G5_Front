@@ -1,9 +1,9 @@
 <template>
   <div class="modall">
     <div class="modall__title">
-      <TitleModall :msg="this.modalDataVideo.subtitle" />
+      <TitleModall :msg="fishData.name" />
     </div>
-    <VideoModall class="modall__video" />
+    <VideoModall class="modall__video" :text="fishData.video_link" />
     <BubblemidModall class="modall__bubbleMid" />
     <BubbletopModall class="modall__bubbleTop" />
   </div>
@@ -23,12 +23,8 @@ export default {
     BubblemidModall,
     BubbletopModall,
   },
-  data() {
-    return {
-      modalDataVideo: {
-        subtitle: "YVETTE THE PINK SHRIMP",
-      },
-    };
+  props: {
+    fishData: Object,
   },
 };
 </script>
@@ -73,7 +69,6 @@ export default {
     justify-self: start;
   }
 }
-
 @media screen and (min-width: 426px) and (max-width: 768px) {
   .modall {
     grid-template-columns: 500px;

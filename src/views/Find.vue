@@ -3,14 +3,15 @@
     <div class="Find__container container">
       <Title class="container__title" msg="FIND SPECIES" />
       <div class="container__infos">
-        <Space class="container_space" />
         <router-link to="research">
           <Submarine class="container__submarine" />
         </router-link>
+        <Click />
       </div>
       <Subinfos
         class="container__subinfos"
-        text="Move the submarine using the arrow keys or WASD"
+        text="
+Use your mouse to search for fish by clicking on them to find out more about them."
       />
     </div>
     <Options />
@@ -21,7 +22,7 @@ import Title from "@/components/Title.vue";
 import Submarine from "@/components/Submarine.vue";
 import Subinfos from "@/components/Subinfos.vue";
 import Options from "@/components/Options.vue";
-import Space from "@/components/Space.vue";
+import Click from "@/components/Click.vue";
 
 export default {
   name: "Find",
@@ -30,7 +31,7 @@ export default {
     Submarine,
     Subinfos,
     Options,
-    Space,
+    Click,
   },
 };
 </script>
@@ -53,7 +54,6 @@ export default {
   color: #fefcd0;
   &__infos {
     display: flex;
-    flex-direction: column;
     height: 50%;
     justify-content: space-around;
     align-items: center;

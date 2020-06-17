@@ -1,6 +1,5 @@
 <template>
   <div class="options">
-    <img src="../assets/english.png" alt="ship" />
     <img src="../assets/sound.png" alt="ship" @click.prevent="muteAudio()" />
   </div>
 </template>
@@ -13,7 +12,7 @@ export default {
   },
   methods: {
     muteAudio() {
-      var audio = new Audio(require(`../assets/sound/sea.mp3`));
+      var audio = new Audio(require(`../assets/sound/sound_all.mp3`));
       audio.muted = true;
     },
   },
@@ -21,9 +20,7 @@ export default {
 </script>
 <style scoped lang="scss">
 .options {
-  display: flex;
   width: 80px;
-  justify-content: space-between;
   position: fixed;
   right: 80px;
   bottom: 35px;

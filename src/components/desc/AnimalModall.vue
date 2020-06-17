@@ -1,16 +1,14 @@
 <template>
   <div class="test">
-    <img :src="require(`../../assets/${text}.svg`)" />
+    <img :src="require(`../../assets/img/img${text}.svg`)" />
   </div>
 </template>
 
 <script>
 export default {
   name: "AnimalModall",
-  data() {
-    return {
-      text: "dolphin",
-    };
+  props: {
+    text: String,
   },
   methods: {},
 };

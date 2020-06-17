@@ -13,16 +13,8 @@
 <script>
 export default {
   name: "VideoModall",
-  data() {
-    return {
-      text: "TuS_UqOsr0k",
-    };
-  },
-  methods: {
-    /* 
-    getVideo: function() {
-      return "../../assets/video/" + this.video;
-    }, */
+  props: {
+    text: String,
   },
 };
 </script>

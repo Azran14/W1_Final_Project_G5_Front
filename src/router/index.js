@@ -2,18 +2,18 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
 import Team from "../views/Team.vue";
-import Contact from "../views/Contact.vue";
+// import Contact from "../views/Contact.vue";
 import Modal from "../views/Modal.vue";
 import Htp from "../views/Htp.vue";
 import Move from "../views/Move.vue";
 import Find from "../views/Find.vue";
 import Research from "../views/Research.vue";
-import Modall from "../views/Modall.vue";
+import Modall from "../components/Modall.vue";
 import Game from "../views/Game.vue";
-import Map from "../views/Map.vue";
+import Map from "../components/Map.vue";
 import Qcm from "../views/Qcm.vue";
 import Qcm2 from "../views/Qcm2.vue";
-import Video from "../views/Video.vue";
+import Video from "../components/Video.vue";
 import Qcm3 from "../views/Qcm3.vue";
 import Slider from "../views/Slider.vue";
 
@@ -32,11 +32,11 @@ const routes = [
     name: "Team",
     component: Team,
   },
-  {
-    path: "/contact",
-    name: "Contact",
-    component: Contact,
-  },
+  // {
+  //   path: "/contact",
+  //   name: "Contact",
+  //   component: Contact,
+  // },
   {
     path: "/modal",
     name: "Modal",
