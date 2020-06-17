@@ -31,7 +31,12 @@
       />
     </div>
     <img class="slider__seaweed" src="../assets/seaweed.svg" alt="seaweed" />
-    <img class="slider__close" src="../assets/closepopup.svg" alt="close" />
+    <img
+      class="slider__close"
+      @click="$emit('close')"
+      src="../assets/closepopup.svg"
+      alt="close"
+    />
   </section>
 </template>
 
@@ -95,6 +100,7 @@ export default {
 }
 
 .slider__close {
+  cursor: pointer;
   position: fixed;
   top: 20px;
   right: 20px;
