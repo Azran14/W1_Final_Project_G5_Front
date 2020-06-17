@@ -3,11 +3,7 @@
     <div class="htp__title">
       <h3>{{ title }}</h3>
     </div>
-    <div class="htp__space">
-      <img src="../assets/space.png" alt="space touch" v-if="counter === 2" />
-    </div>
     <div class="htp__infos">
-      <img src="../assets/keyboard.svg" alt="keyboard" v-if="counter === 1" />
       <img
         class="htp__submarineLight"
         v-if="counter === 3"
@@ -20,7 +16,6 @@
         src="../assets/shipnolight.svg"
         alt="submarine"
       />
-      <img src="../assets/wasd.svg" alt="wasd" v-if="counter === 1" />
     </div>
     <div class="htp__subtitle">
       <p>{{ subtitle }}</p>
