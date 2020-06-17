@@ -10,14 +10,18 @@
       </div>
     </div>
     <div class="loader">
+      <!-- 
       <div class="loader__title--yellow" id="test">
         <a :href="link">{{ title }}</a>
-      </div>
+      </div> --><!-- 
       <div class="loader__submarine">
         <img src="../assets/shipnolight.svg" />
         <div src="../assets/hand.svg" class="loader__submarine--hand" />
+      </div> -->
+      <div>
+        <Htp />
       </div>
-      <div class="loader__info">
+      <!--  <div class="loader__info">
         <p>Take place in the submarine</p>
       </div>
       <div class="loader__params">
@@ -31,7 +35,7 @@
           src="../assets/sound.png"
           alt="sound"
         />
-      </div>
+      </div> -->
     </div>
   </div>
 </template>
@@ -39,9 +43,13 @@
 <script>
 // @ is an alias to /src
 // import HelloWorld from "@/components/HelloWorld.vue";
+import Htp from "@/views/Htp.vue";
 
 export default {
   name: "Home",
+  components: {
+    Htp,
+  },
   data() {
     return {
       title: "EXPLORE THE OCEAN",

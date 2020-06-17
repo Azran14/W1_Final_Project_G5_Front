@@ -41,9 +41,9 @@
 </template>
 
 <script>
-import Video from "@/views/Video.vue";
-import Map from "@/views/Map.vue";
-import Modall from "@/views/Modall.vue";
+import Video from "@/components/Video.vue";
+import Map from "@/components/Map.vue";
+import Modall from "@/components/Modall.vue";
 
 export default {
   name: "SliderModal",
