@@ -2,7 +2,7 @@
   <section>
     <div class="container">
       <img
-        @click="(showModal = true), $emit('modalOn')"
+        @click="(showModal = true), $emit('modalOn'), (fishIndex = index)"
         v-for="(info, index) in fishData"
         :key="index"
         class="animal"
@@ -12,6 +12,7 @@
         v-if="showModal"
         @close="(showModal = false), $emit('closeModal')"
         class="modal"
+        :fishData="fishData[fishIndex]"
       />
     </div>
   </section>
@@ -41,6 +42,7 @@ export default {
       // .catch((error) => alert("Erreur : " + error));,
       showModal: false,
       request: false,
+      fishIndex: Number,
     };
   },
   // watch: {
