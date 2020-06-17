@@ -138,6 +138,18 @@ export default {
     bottom: 0;
     right: 10px;
   }
+  .slider__ship {
+    position: fixed;
+    width: 100px;
+    height: 100px;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+  }
+  .slider__container {
+    width: 90%;
+    height: 90%;
+  }
   .slider__modals {
     display: flex;
     flex-direction: column;
@@ -154,6 +166,33 @@ export default {
     }
     :nth-child(3) {
       width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 425px) {
+  .slider__ship {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+  }
+  .slider__seaweed {
+    position: fixed;
+    width: 40px;
+    bottom: 0;
+    right: 10px;
+  }
+  .slider__modals {
+    :nth-child(2) {
+      width: 100%;
+      height: 40%;
+    }
+    :nth-child(3) {
+      width: 70%;
       height: 100%;
     }
   }

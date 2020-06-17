@@ -30,32 +30,6 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@media (max-width: 1300px) {
-  .modall {
-    grid-template-columns: 150px 1fr 150px;
-    grid-template-rows: 100px 300px 150px;
-    &__title {
-      font-size: 30px;
-      line-height: 50px;
-      grid-column: 2 / 2;
-      grid-row: 1 / 1;
-    }
-    &__video {
-      width: 70%;
-      grid-column: 1 / span 3;
-      grid-row: 2 / span 2;
-    }
-    &__bubbleMid {
-      grid-column: 1 / 1;
-      grid-row: 3 / 3;
-    }
-    &__bubbleTop {
-      grid-column: 3 / 3;
-      grid-row: 1 / 1;
-    }
-  }
-}
-
 .modall {
   display: inline-grid;
   grid-template-columns: 150px 1fr 150px;
@@ -93,6 +67,46 @@ export default {
     grid-column: 3 / 3;
     grid-row: 1 / 1;
     justify-self: start;
+  }
+}
+@media screen and (min-width: 426px) and (max-width: 768px) {
+  .modall {
+    grid-template-columns: 500px;
+    grid-template-rows: 500px;
+    &__title {
+      display: none;
+    }
+    &__video {
+      grid-column: 1;
+      grid-row: 1;
+      width: 300px;
+    }
+    &__bubbleMid {
+      display: none;
+    }
+    &__bubbleTop {
+      display: none;
+    }
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 425px) {
+  .modall {
+    grid-template-columns: 280px;
+    grid-template-rows: 200px 200px;
+    &__title {
+      display: none;
+    }
+    &__video {
+      grid-column: 1 / 1;
+      grid-row: 1 / span 2;
+    }
+    &__bubbleMid {
+      display: none;
+    }
+    &__bubbleTop {
+      display: none;
+    }
   }
 }
 </style>
