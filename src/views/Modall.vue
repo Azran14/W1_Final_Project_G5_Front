@@ -251,4 +251,110 @@ export default {
     grid-row: 1 / 1;
   }
 }
+
+@media (max-width: 900px) {
+  .modall {
+    &__title {
+      font-size: 30px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .modall {
+    grid-template-columns: 500px;
+    grid-template-rows: repeat(10, 50px);
+
+    &__title {
+      font-size: 20px;
+      grid-column: 1 / 1;
+      grid-row: 1 / 1;
+      justify-self: center;
+    }
+    &__weight {
+      font-size: 10px;
+      grid-column: 1 / 1;
+      grid-row: 2 / 2;
+      justify-self: start;
+      align-self: end;
+    }
+    &__size {
+      font-size: 10px;
+      grid-column: 1 / 1;
+      grid-row: 6 / 6;
+      justify-self: start;
+      align-self: center;
+    }
+    &__bubble {
+      width: 200px;
+      height: 200px;
+      grid-column: 1 / 1;
+      grid-row: 5 / 5;
+      justify-self: start;
+      align-self: center;
+    }
+    &__identity {
+      width: 100px;
+      height: 100px;
+      grid-column: 1 / 1;
+      grid-row: 4 / 4;
+      justify-self: end;
+      align-self: center;
+    }
+    &__arrowup {
+      grid-column: 1 / 1;
+      grid-row: 5 / 5;
+      justify-self: center;
+      align-self: center;
+    }
+    &__arrowdown {
+      grid-column: 1 / 1;
+      grid-row: 3 / 3;
+      justify-self: start;
+      align-self: start;
+    }
+    &__animal {
+      width: 200px;
+      height: 200px;
+      grid-column: 1 / 1;
+      grid-row: 5 / 5;
+      justify-self: start;
+      align-self: center;
+    }
+    &__longevity {
+      font-size: 10px;
+      grid-column: 1 / 1;
+      grid-row: 8 / 8;
+      justify-self: start;
+      align-self: start;
+    }
+    &__reproduction {
+      font-size: 10px;
+      grid-column: 1 / 1;
+      grid-row: 9 / 9;
+      justify-self: start;
+      align-self: start;
+    }
+    &__details {
+      font-size: 10px;
+      grid-column: 1 / 1;
+      grid-row: 7 / 7;
+      justify-self: start;
+      align-self: start;
+    }
+    &__showdetail {
+      font-size: 10px;
+      grid-column: 1 / 1;
+      grid-row: 7 / 7;
+      justify-self: start;
+      align-self: start;
+    }
+  }
+}
+
+@media screen and (max-width: 435px) {
+  .modall {
+    grid-template-columns: 400px;
+  }
+}
 </style>
