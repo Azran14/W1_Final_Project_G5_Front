@@ -2,10 +2,12 @@
   <div class="game">
     <div @mousemove="mouseMove" @scroll="mouseMove">
       <SubmarineLight class="submarine" />
+
       <Zone
-        v-for="zoneCounter in zones"
+        v-for="(zoneCounter, index) in zones"
         :key="zoneCounter"
         :zoneData="zoneCounter"
+        :title="titles[index]"
         @modalOn="subMove = false"
         @closeModal="subMove = true"
       />
@@ -36,6 +38,7 @@ export default {
       subMpos: { x: 0, y: 0 },
       mouse: { x: 0, y: 0 },
       subMove: true,
+      titles: ["First Zone", "Second Zone", " Third Zone", "Fourth Zone"],
     };
   },
   methods: {

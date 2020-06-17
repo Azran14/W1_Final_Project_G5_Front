@@ -3,7 +3,7 @@
     <div class="Find__container container">
       <Title class="container__title" msg="FIND SPECIES" />
       <div class="container__infos">
-        <router-link to="research">
+        <router-link to="game">
           <Submarine class="container__submarine" />
         </router-link>
         <Click />
