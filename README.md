@@ -9,7 +9,7 @@
 - RATSIMISETRA Nastia
 - BENSIMHON Yoan
 
-## URL du projet
+## Project URL
 
 - https://finalprojectg5.netlify.app/
 
