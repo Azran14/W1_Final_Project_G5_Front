@@ -38,7 +38,12 @@ export default {
       subMpos: { x: 0, y: 0 },
       mouse: { x: 0, y: 0 },
       subMove: true,
-      titles: ["First Zone", "Second Zone", " Third Zone", "Fourth Zone"],
+      titles: [
+        "Daylight Zone",
+        "Twilight Zone",
+        "Midnight Zone",
+        "Hadale Zone",
+      ],
     };
   },
   methods: {

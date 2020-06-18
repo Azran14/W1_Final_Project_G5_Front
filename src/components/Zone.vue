@@ -80,10 +80,7 @@ export default {
   }
 }
 .animal {
-  /* 
-  height: 200px;
-  width: 200px; */
-  margin-bottom: 300px;
+  margin: 150px;
   z-index: 98;
 }
 .container {
