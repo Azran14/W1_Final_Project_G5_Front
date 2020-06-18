@@ -15,7 +15,6 @@
         @closeModal="subMove = true"
       />
     </div>
-    <Audio />
     <Options />
   </div>
 </template>
@@ -24,7 +23,6 @@
 import Zone from "@/components/Zone.vue";
 import SubmarineLight from "@/components/SubmarineLight.vue";
 import Options from "@/components/Options.vue";
-import Audio from "@/components/Audio.vue";
 
 export default {
   name: "Game",
@@ -32,7 +30,6 @@ export default {
     Zone,
     SubmarineLight,
     Options,
-    Audio,
   },
   data() {
     return {
