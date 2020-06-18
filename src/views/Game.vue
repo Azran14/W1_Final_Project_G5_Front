@@ -2,7 +2,10 @@
   <div class="game">
     <div @mousemove="mouseMove" @scroll="mouseMove">
       <SubmarineLight class="submarine" />
-
+      <h2 class="intro">
+        Hey ! Welcome to the ocean. Now that you're in the submarine you can
+        explore this new world and discover species !
+      </h2>
       <Zone
         v-for="(zoneCounter, index) in zones"
         :key="zoneCounter"
@@ -13,7 +16,6 @@
       />
     </div>
     <Audio />
-
     <Options />
   </div>
 </template>
@@ -92,11 +94,21 @@ export default {
 };
 </script>
 <style scoped lang="scss">
+.intro {
+  font-family: "poppins-bold";
+  color: #fefcd0;
+  line-height: 70px;
+  font-size: 45px;
+  padding: 250px;
+}
 .game {
   background-image: url(../assets/bg.svg);
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .submarine {
   position: fixed;
