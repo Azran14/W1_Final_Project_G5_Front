@@ -13,4 +13,8 @@ export default {
   methods: {},
 };
 </script>
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+img {
+  width: 100%;
+}
+</style>

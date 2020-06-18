@@ -1,6 +1,10 @@
 <template>
   <div class="options">
-    <img src="../assets/sound.png" alt="ship" @click.prevent="muteAudio()" />
+    <img
+      src="../assets/sound.png"
+      alt="ship"
+      @click.prevent="audio.isPlaying ? pause(audio) : play(audio)"
+    />
   </div>
 </template>
 
@@ -8,12 +12,22 @@
 export default {
   name: "Options",
   data() {
-    return {};
+    return {
+      audio: {
+        file: new Audio(require("../assets/sound/sound_all.mp3")),
+        isPlaying: true,
+      },
+    };
   },
   methods: {
-    muteAudio() {
-      var audio = new Audio(require(`../assets/sound/sound_all.mp3`));
-      audio.muted = true;
+    play: function(audio) {
+      audio.isPlaying = true;
+      audio.file.play();
+      audio.loop();
+    },
+    pause: function(audio) {
+      audio.isPlaying = false;
+      audio.file.pause();
     },
   },
 };
@@ -24,5 +38,7 @@ export default {
   position: fixed;
   right: 80px;
   bottom: 35px;
+  cursor: pointer;
+  padding: 10px;
 }
 </style>

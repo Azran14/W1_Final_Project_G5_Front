@@ -156,6 +156,8 @@ export default {
     grid-row: 4 / span 2;
     justify-self: start;
     align-self: start;
+    width: 200px;
+    height: 200px;
     z-index: 999;
   }
   &__reproduction {

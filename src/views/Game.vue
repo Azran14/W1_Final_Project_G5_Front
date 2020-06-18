@@ -2,18 +2,19 @@
   <div class="game">
     <div @mousemove="mouseMove" @scroll="mouseMove">
       <SubmarineLight class="submarine" />
-
+      <h2 class="intro">
+        Hey ! Welcome to the ocean. Now that you're in the submarine you can
+        explore this new world and discover species !
+      </h2>
       <Zone
         v-for="(zoneCounter, index) in zones"
         :key="zoneCounter"
         :zoneData="zoneCounter"
-        :title="titles[index]"
+        :zone="zonesInfo[index]"
         @modalOn="subMove = false"
         @closeModal="subMove = true"
       />
     </div>
-    <Audio />
-
     <Options />
   </div>
 </template>
@@ -22,7 +23,6 @@
 import Zone from "@/components/Zone.vue";
 import SubmarineLight from "@/components/SubmarineLight.vue";
 import Options from "@/components/Options.vue";
-import Audio from "@/components/Audio.vue";
 
 export default {
   name: "Game",
@@ -30,7 +30,6 @@ export default {
     Zone,
     SubmarineLight,
     Options,
-    Audio,
   },
   data() {
     return {
@@ -38,7 +37,28 @@ export default {
       subMpos: { x: 0, y: 0 },
       mouse: { x: 0, y: 0 },
       subMove: true,
-      titles: ["First Zone", "Second Zone", " Third Zone", "Fourth Zone"],
+      zonesInfo: [
+        {
+          title: "Daylight Zone",
+          description:
+            "This is the only place in the ocean that the light penetrates.",
+        },
+        {
+          title: "Twilight Zone",
+          description:
+            "Some light still comes through, and most of the sea creatures live there.",
+        },
+        {
+          title: "Midnight Zone",
+          description:
+            "It is absolutely dark in there. Most of the creatures living there are blind.",
+        },
+        {
+          title: "Hadale Zone",
+          description:
+            "This is the abyssal depths of the ocean. The scariest creatures live there. Most of them are still unknown to us.",
+        },
+      ],
     };
   },
   methods: {
@@ -71,11 +91,21 @@ export default {
 };
 </script>
 <style scoped lang="scss">
+.intro {
+  font-family: "poppins-bold";
+  color: #fefcd0;
+  line-height: 70px;
+  font-size: 45px;
+  padding: 250px;
+}
 .game {
   background-image: url(../assets/bg.svg);
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .submarine {
   position: fixed;
