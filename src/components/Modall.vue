@@ -116,7 +116,6 @@ export default {
   grid-template-columns: 100px 200px 250px 300px 100px;
   grid-template-rows: repeat(3, 15%) 30% 20%;
   grid-column-gap: 10px;
-  white-space: nowrap;
   max-width: 80vw;
   padding: 25px;
   color: #fefcd0;
@@ -127,9 +126,10 @@ export default {
     font-weight: bold;
     line-height: 60px;
     letter-spacing: 0.1em;
-    grid-column: 3 / span 2;
+    grid-column: 3 / span 4;
     grid-row: 1 / 1;
     justify-self: start;
+    z-index: 99;
   }
 
   &__weight {
@@ -189,7 +189,7 @@ export default {
   }
   &__sound {
     grid-column: 4 / 4;
-    grid-row: 4 / 4;
+    grid-row: 5 / 5;
     justify-self: start;
     align-self: start;
   }

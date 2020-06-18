@@ -1,9 +1,8 @@
 <template>
   <div class="identity">
     <p>
-      Hi, my name is {{ fishData.name }}. <br />
-      I am from the {{ fishData.family }} <br />
-      family and I am a <br />
+      Hi, my name is {{ fishData.name }}. I am from the {{ fishData.family }}
+      family and I am a
       {{ fishData.species }}
     </p>
   </div>
@@ -31,6 +30,7 @@ export default {
     font-size: 15px;
     font-family: "poppins-bold";
     line-height: 22px;
+    width: 200px;
   }
 }
 </style>

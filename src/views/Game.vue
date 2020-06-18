@@ -16,6 +16,12 @@
       />
     </div>
     <Options />
+    <p class="notion">
+      This site has been created for educational purposes as part of the
+      Bachelor's curriculum of the HETIC school. The contents presented have not
+      been the subject of a request for right of use. This site will in no case
+      be used for commercial purposes and will not be published.
+    </p>
   </div>
 </template>
 
@@ -112,5 +118,11 @@ export default {
   position: fixed;
   width: 150px;
   transition: transform 0.1s;
+}
+.notion {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #fefcd0;
+  font-size: 10px;
 }
 </style>
