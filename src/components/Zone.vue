@@ -82,6 +82,10 @@ export default {
 .animal {
   margin: 150px;
   z-index: 98;
+  animation: moveFish 8s infinite ease-in-out;
+  &:nth-child(odd) {
+    animation: moveFish 6s infinite reverse ease-in;
+  }
 }
 .container {
   width: 90%;
@@ -96,5 +100,19 @@ section {
 }
 .modal {
   z-index: 99;
+}
+
+@keyframes moveFish {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(40px, 20px);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
 }
 </style>
