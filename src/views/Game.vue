@@ -125,4 +125,10 @@ export default {
   color: #fefcd0;
   font-size: 10px;
 }
+
+@media screen and (min-width: 320px) and (max-width: 425px) {
+  .intro {
+    font-size: 24px;
+  }
+}
 </style>
