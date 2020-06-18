@@ -96,13 +96,14 @@ export default {
   color: #fefcd0;
   line-height: 70px;
   font-size: 45px;
-  padding: 250px;
+  padding-top: 250px;
+  padding-bottom: 250px;
 }
 .game {
   background-image: url(../assets/bg.svg);
   background-size: cover;
   background-repeat: no-repeat;
-  width: 100%;
+  width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center;
