@@ -55,7 +55,7 @@ export default {
 </script>
 <style scoped lang="scss">
 .zone {
-  width: 100%;
+  width: 100vw;
   height: 125px;
   background-color: rgba(0, 0, 139, 0.219);
   display: flex;
@@ -81,15 +81,18 @@ export default {
   }
 }
 .animal {
-  margin: 150px;
+  margin-top: 150px;
+  margin-bottom: 150px;
+  max-width: 80vw;
   z-index: 98;
+  max-width: 40%;
   animation: moveFish 8s infinite ease-in-out;
   &:nth-child(odd) {
     animation: moveFish 6s infinite reverse ease-in;
   }
 }
 .container {
-  width: 90%;
+  width: 100vw;
   display: flex;
   flex-direction: column;
   min-height: 200px;
@@ -115,5 +118,7 @@ section {
   100% {
     transform: translate(0, 0);
   }
+}
+@media (max-width: 750px) {
 }
 </style>
