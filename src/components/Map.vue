@@ -32,7 +32,7 @@ export default {
 <style scoped lang="scss">
 .modall {
   display: inline-grid;
-  grid-template-columns: 100px 900px 100px;
+  grid-template-columns: 100px 800px 100px;
   grid-template-rows: 100px 400px 100px;
   grid-column-gap: 10px;
   white-space: nowrap;
@@ -46,19 +46,21 @@ export default {
     grid-row: 2 / span 2;
     justify-self: start;
     align-self: end;
+    width: 70px;
   }
   &__bubbleTop {
     grid-column: 3 / 3;
     grid-row: 1 / 1;
     justify-self: end;
     align-self: end;
+    width: 70px;
   }
   &__map {
     grid-column: 1 / span 3;
     grid-row: 1 / span 3;
     justify-self: center;
     align-self: center;
-    width: 95%;
+    width: 85%;
     height: 100%;
   }
   /*&__seaweed {

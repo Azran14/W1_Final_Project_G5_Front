@@ -64,4 +64,15 @@ export default {
     margin-bottom: 90px;
   }
 }
+
+@media screen and (min-width: 320px) and (max-width: 425px) {
+  .container {
+    &__title {
+      font-size: 32px;
+    }
+    &__subinfos {
+      font-size: 12px;
+    }
+  }
+}
 </style>

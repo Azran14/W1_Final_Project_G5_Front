@@ -32,6 +32,7 @@ export default {
   h3 {
     font-family: "poppins-bold";
     font-size: 24px;
+    line-height: 36px;
   }
 }
 </style>
