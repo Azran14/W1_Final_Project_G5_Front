@@ -1,7 +1,8 @@
 <template>
   <section>
     <div class="zone">
-      <h2 class="zone__title">{{ title }}</h2>
+      <h2 class="zone__title">{{ zone.title }}</h2>
+      <p class="zone__descript">{{ zone.description }}</p>
     </div>
 
     <div class="container">
@@ -31,7 +32,7 @@ export default {
   },
   props: {
     zoneData: Number,
-    title: String,
+    zone: Object,
   },
   data() {
     return {
@@ -44,33 +45,33 @@ export default {
           this.fishData = data;
           this.request = true;
         }),
-      // .catch((error) => alert("Erreur : " + error));,
       showModal: false,
       request: false,
       fishIndex: Number,
     };
   },
-  // watch: {
-  //   request: function() {
-  //     if (this.request) this.loadFish(this.zoneData);
-  //   },
-  // },
   methods: {},
 };
 </script>
 <style scoped lang="scss">
 .zone {
   width: 100%;
-  height: 100px;
+  height: 125px;
   background-color: rgba(0, 0, 139, 0.219);
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  color: #fefcd0;
+  font-family: "poppins-bold";
   &__title {
     font-size: 45px;
     text-transform: uppercase;
-    font-family: "poppins-bold";
-    color: #fefcd0;
+  }
+  &__descript {
+    font-family: "poppins";
+    margin-top: 10px;
+    font-size: 24px;
   }
 }
 

@@ -7,7 +7,7 @@
         v-for="(zoneCounter, index) in zones"
         :key="zoneCounter"
         :zoneData="zoneCounter"
-        :title="titles[index]"
+        :zone="zonesInfo[index]"
         @modalOn="subMove = false"
         @closeModal="subMove = true"
       />
@@ -38,11 +38,27 @@ export default {
       subMpos: { x: 0, y: 0 },
       mouse: { x: 0, y: 0 },
       subMove: true,
-      titles: [
-        "Daylight Zone",
-        "Twilight Zone",
-        "Midnight Zone",
-        "Hadale Zone",
+      zonesInfo: [
+        {
+          title: "Daylight Zone",
+          description:
+            "This is the only place in the ocean that the light penetrates.",
+        },
+        {
+          title: "Twilight Zone",
+          description:
+            "Some light still comes through, and most of the sea creatures live there.",
+        },
+        {
+          title: "Midnight Zone",
+          description:
+            "It is absolutely dark in there. Most of the creatures living there are blind.",
+        },
+        {
+          title: "Hadale Zone",
+          description:
+            "This is the abyssal depths of the ocean. The scariest creatures live there. Most of them are still unknown to us.",
+        },
       ],
     };
   },
