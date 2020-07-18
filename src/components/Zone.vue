@@ -40,11 +40,9 @@ export default {
     return {
       fishData: dataJson[this.zoneData],
       showModal: false,
-      request: false,
       fishIndex: Number,
     };
   },
-  methods: {},
 };
 </script>
 <style scoped lang="scss">
