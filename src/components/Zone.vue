@@ -25,6 +25,8 @@
 
 <script>
 import SliderModal from "@/components/SliderModal.vue";
+import dataJson from "@/data/fishData.json";
+
 export default {
   name: "Zone",
   components: {
@@ -36,18 +38,7 @@ export default {
   },
   data() {
     return {
-      fishData: fetch(
-        "https://ocean-api.vdpn.io/API/index.php?filter=zone&value=" +
-          this.zoneData
-      )
-        .then((response) => response.json())
-        .then((data) => {
-          this.fishData = data;
-          this.request = true;
-        }),
-      showModal: false,
-      request: false,
-      fishIndex: Number,
+      fishData: dataJson[this.zoneData],
     };
   },
   methods: {},
