@@ -39,6 +39,9 @@ export default {
   data() {
     return {
       fishData: dataJson[this.zoneData],
+      showModal: false,
+      request: false,
+      fishIndex: Number,
     };
   },
   methods: {},
